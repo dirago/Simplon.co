@@ -1,6 +1,6 @@
 # Simplon.co
 
-<img src="http://lyon.simplon.co/wp-content/uploads/2015/08/142326-Simplon-logo-simplon.lyon_-300x110.jpg alt="simplon logo" style="align='center'"/>
+![Simplon](http://lyon.simplon.co/wp-content/uploads/2015/08/142326-Simplon-logo-simplon.lyon_-300x110.jpg "simplon logo")
 
 ## Formation Developpeur Web - 1ère partie (04/07/2016 - 27/01/2017)
 
@@ -14,4 +14,3 @@ Des compétences et des technologies : essentiellement le développement « fron
 Des méthodes : méthodologies agiles, Test Driven Development (TDD), pair programming, etc.
 Des outils : Git, Github, Slack, Sublime text, etc.
 Des ouvertures sur d’autres domaines : en fonction notamment des experts qui proposeront des interventions. Sécurité, environnement, intelligence artificielle, consommation collaborative, entrepreneuriat, communication, marketing, … Autant de sujets qui pourront donner lieu à des interventions, sur votre demande notamment.
-
