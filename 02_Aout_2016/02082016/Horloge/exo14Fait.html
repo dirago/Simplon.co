@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Essai DHTML</title>
+    <style type="text/css">
+        <!--
+        /* Positions des chiffres sur le cadran*/
+
+        #chiffre12 {
+            position: absolute;
+            top: 100px;
+            left: 200px
+        }
+
+        #chiffre11 {
+            position: absolute;
+            top: 113px;
+            left: 150px
+        }
+
+        #chiffre10 {
+            position: absolute;
+            top: 150px;
+            left: 113px
+        }
+
+        #chiffre9 {
+            position: absolute;
+            top: 200px;
+            left: 100px
+        }
+
+        #chiffre8 {
+            position: absolute;
+            top: 250px;
+            left: 113px
+        }
+
+        #chiffre7 {
+            position: absolute;
+            top: 287px;
+            left: 150px
+        }
+
+        #chiffre6 {
+            position: absolute;
+            top: 300px;
+            left: 200px
+        }
+
+        #chiffre5 {
+            position: absolute;
+            top: 287px;
+            left: 250px
+        }
+
+        #chiffre4 {
+            position: absolute;
+            top: 250px;
+            left: 287px
+        }
+
+        #chiffre3 {
+            position: absolute;
+            top: 200px;
+            left: 300px
+        }
+
+        #chiffre2 {
+            position: absolute;
+            top: 150px;
+            left: 287px
+        }
+
+        #chiffre1 {
+            position: absolute;
+            top: 113px;
+            left: 250px
+        }
+        /* Position du rond central*/
+
+        #centre {
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            font-family: arial
+        }
+        /* Positions initiales des aiguilles */
+
+        #aiguilleheure {
+            position: absolute;
+            top: 110px;
+            left: 200px
+        }
+
+        #aiguilleminute {
+            position: absolute;
+            top: 110px;
+            left: 200px
+        }
+
+        -->
+    </style>
+
+    <script type="text/javascript">
+        <!--
+        var compteur_minutes = 0;
+        var compteur_heures = 0;
+
+        function tourne() {
+            var aiguilleHeure = document.getElementById('aiguilleheure');
+            var aiguilleMinute = document.getElementById('aiguilleminute');
+            switch (compteur_minutes) {
+                case 0:
+                    aiguilleMinute.style.top = "123px";
+                    aiguilleMinute.style.left = "250px";
+                    break;
+                case 1:
+                    aiguilleMinute.style.top = "160px";
+                    aiguilleMinute.style.left = "287px";
+                    break;
+                case 2:
+                    aiguilleMinute.style.top = "210px";
+                    aiguilleMinute.style.left = "300px";
+                    break;
+                case 3:
+                    aiguilleMinute.style.top = "260px";
+                    aiguilleMinute.style.left = "287px";
+                    break;
+                case 4:
+                    aiguilleMinute.style.top = "297px";
+                    aiguilleMinute.style.left = "250px";
+                    break;
+                case 5:
+                    aiguilleMinute.style.top = "310px";
+                    aiguilleMinute.style.left = "200px";
+                    break;
+                case 6:
+                    aiguilleMinute.style.top = "297px";
+                    aiguilleMinute.style.left = "150px";
+                    break;
+                case 7:
+                    aiguilleMinute.style.top = "260px";
+                    aiguilleMinute.style.left = "113px";
+                    break;
+                case 8:
+                    aiguilleMinute.style.top = "210px";
+                    aiguilleMinute.style.left = "100px";
+                    break;
+                case 9:
+                    aiguilleMinute.style.top = "160px";
+                    aiguilleMinute.style.left = "113px";
+                    break;
+                case 10:
+                    aiguilleMinute.style.top = "123px";
+                    aiguilleMinute.style.left = "150px";
+                    break;
+                case 11:
+                    aiguilleMinute.style.top = "110px";
+                    aiguilleMinute.style.left = "200px";
+                    break;
+                default:
+                    break;
+            }
+            compteur_minutes = (compteur_minutes + 1) % 12;
+
+            if (compteur_minutes === 0) {
+                switch (compteur_heures) {
+                    case 0:
+                        aiguilleHeure.style.top = "123px";
+                        aiguilleHeure.style.left = "250px";
+                        break;
+                    case 1:
+                        aiguilleHeure.style.top = "160px";
+                        aiguilleHeure.style.left = "287px";
+                        break;
+                    case 2:
+                        aiguilleHeure.style.top = "210px";
+                        aiguilleHeure.style.left = "300px";
+                        break;
+                    case 3:
+                        aiguilleHeure.style.top = "260px";
+                        aiguilleHeure.style.left = "287px";
+                        break;
+                    case 4:
+                        aiguilleHeure.style.top = "297px";
+                        aiguilleHeure.style.left = "250px";
+                        break;
+                    case 5:
+                        aiguilleHeure.style.top = "310px";
+                        aiguilleHeure.style.left = "200px";
+                        break;
+                    case 6:
+                        aiguilleHeure.style.top = "297px";
+                        aiguilleHeure.style.left = "150px";
+                        break;
+                    case 7:
+                        aiguilleHeure.style.top = "260px";
+                        aiguilleHeure.style.left = "113px";
+                        break;
+                    case 8:
+                        aiguilleHeure.style.top = "210px";
+                        aiguilleHeure.style.left = "100px";
+                        break;
+                    case 9:
+                        aiguilleHeure.style.top = "160px";
+                        aiguilleHeure.style.left = "113px";
+                        break;
+                    case 10:
+                        aiguilleHeure.style.top = "123px";
+                        aiguilleHeure.style.left = "150px";
+                        break;
+                    case 11:
+                        aiguilleHeure.style.top = "110px";
+                        aiguilleHeure.style.left = "200px";
+                        break;
+                    default:
+                        break;
+                }
+                compteur_heures = (compteur_heures + 1) % 12;
+            }
+            if (on) {
+                window.setTimeout("tourne()", "1000");
+            }
+        }
+
+
+        //-->
+    </script>
+
+</head>
+
+<body>
+
+    <p>Une petite horloge...</p>
+    <button type="submit" name="button" onclick="on=true; tourne()">Lancer</button>
+    <button type="submit" name="button" onclick="on=false;">Arrêter</button>
+    <div id="chiffre1">
+        <p>1</p>
+    </div>
+    <div id="chiffre2">
+        <p>2</p>
+    </div>
+    <div id="chiffre3">
+        <p>3</p>
+    </div>
+    <div id="chiffre4">
+        <p>4</p>
+    </div>
+    <div id="chiffre5">
+        <p>5</p>
+    </div>
+    <div id="chiffre6">
+        <p>6</p>
+    </div>
+    <div id="chiffre7">
+        <p>7</p>
+    </div>
+    <div id="chiffre8">
+        <p>8</p>
+    </div>
+    <div id="chiffre9">
+        <p>9</p>
+    </div>
+    <div id="chiffre10">
+        <p>10</p>
+    </div>
+    <div id="chiffre11">
+        <p>11</p>
+    </div>
+    <div id="chiffre12">
+        <p>12</p>
+    </div>
+    <div id="centre">
+        <p>o</p>
+    </div>
+
+    <div><img alt="heures" src="rondbleu.gif" height="21" id="aiguilleheure" width="21"></div>
+    <div><img alt="minutes" src="rondrouge.gif" height="21" id="aiguilleminute" width="21"></div>
+
+</body>
+
+</html>

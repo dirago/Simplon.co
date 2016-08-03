@@ -1,0 +1,477 @@
+@font-face{
+    font-family:Airglyphs;
+    src:url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/airglyphs-300e58e582c108dce795f3a3156e5b8c.eot");
+    src:url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/airglyphs-ie8-095785bf4e6fb87d882c113ef86beb83.eot?#") format("eot"),
+    url("https://a2.muscache.com/airbnb/static/airbnb-o2/fonts/airglyphs-54181e7c7f91745dfefac44cc5d704e1.woff") format("woff"),
+    url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/airglyphs-5f5be2154bdf6ba86a13824dba3252c6.ttf") format("truetype"),
+    url("https://a2.muscache.com/airbnb/static/airbnb-o2/fonts/airglyphs-e66bf14a81cf080cff79f69df47f6053.svg") format("svg");
+    font-weight:normal;
+    font-style:normal
+}
+@font-face{
+    font-family:Circular;
+    src:url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-22799398756cc42454a77735013a3378.eot");
+    src:url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-22799398756cc42454a77735013a3378.eot?#") format("eot"),
+    url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-030dcebde359eb3be354ab21c34a89ce.woff") format("woff"),
+    url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-287e910a06039c130e488343a7564c39.svg") format("svg");
+    font-weight:normal;
+    font-style:normal
+}
+@font-face{
+    font-family:Circular;
+    src:url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-35e1cf57d93dc4eb3db11cc2448cb91f.eot");
+    src:url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-35e1cf57d93dc4eb3db11cc2448cb91f.eot?#") format("eot"),
+    url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-1db902f5b85bbb0964e2994434edbe16.woff") format("woff"),
+    url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-0d9eb203b260869dc2470ae35162fc1e.svg") format("svg");
+    font-weight:normal;
+    font-style:italic
+}
+@font-face{
+    font-family:Circular;
+    src:url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-d74b6eea213711f97770fccaf37a7644.eot");
+    src:url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-d74b6eea213711f97770fccaf37a7644.eot?#") format("eot"),
+    url("https://a2.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-ba3e389678777af817295255589ca6f5.woff") format("woff"),
+    url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-3831f8bc07e9e70a9b42b4be3ea1a32c.svg") format("svg");
+    font-weight:700;
+    font-style:normal
+}
+@font-face{
+    font-family:Circular;
+    src:url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-8a3ba8037e29f0cf239dd80221c8fcbd.eot");
+    src:url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-8a3ba8037e29f0cf239dd80221c8fcbd.eot?#") format("eot"),
+    url("https://a2.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-6c6387f8d64ca549bfd6ce64f3e1ea1e.woff") format("woff"),
+    url("https://a1.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-a620f5ba0b473c36cdfce66bf4edf456.svg") format("svg");
+    font-weight:200;
+    font-style:normal
+}
+@keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+body {
+    font-family: 'Circular';
+    letter-spacing: 0.3px;
+    margin: auto;
+    color: white;
+    background-color: #edefed;
+}
+#first_bloc {
+    /*background-image: url(../images/bg.jpg);
+    background-size: 100%;
+    background-position: 0 -75px;*/
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+video {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+#videoFS {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 2s;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+     -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 2s;
+}
+#videoFS video {
+    max-width: 100%;
+    height: auto;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+     -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 2s;
+}
+#videoFS i {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    position: absolute;
+    left: 47%;
+    top: 45%;
+}
+#videoFS i::after {
+    content: '\f1fe';
+    line-height: 1;
+    font-family: 'Airglyphs';
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    font-style: normal;
+    font-size: 100px;
+    cursor: pointer;
+}
+#videoFS span {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    right: 4%;
+    top: 8%;
+}
+#videoFS span::before {
+    content: '\f1c9';
+    line-height: 1;
+    font-family: 'Airglyphs';
+    height: 20px;
+    width: 20px;
+    margin: auto;
+    font-style: normal;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+#top_bar {
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 14px;
+    height: 60px;
+}
+#logo {
+    display: inline-block;
+}
+#logo img {
+    width: 100px;
+    height: auto;
+}
+
+#menu {
+    float: right;
+    display: inline-block;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 300;
+    position: relative;
+    top: -13px;
+}
+
+.elmt_menu {
+    display: inline-block;
+    padding-left: 35px;
+}
+
+#hote {
+    border: 2px solid #FFF;
+    border-radius: 2px;
+    padding: 5px 11px;
+}
+
+#texte {
+    margin: auto;
+    margin-top: 88px;
+    text-align: center;
+}
+
+#texte h1 {
+    text-transform: uppercase;
+    font-size: 60px;
+    margin-bottom: -10px;
+}
+
+#texte span::after {
+    content: '\f1fe';
+    font-family: 'Airglyphs';
+    font-size: 100px;
+    opacity: 0.8;
+    line-height: 1.2;
+}
+
+#foot_bar {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+}
+
+#bar {
+    text-align: center;
+}
+
+#bar .ville {
+    height: 42px;
+    width: 380px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border: 1px solid #bbbbbb;
+    background-color: #FFF;
+    display: inline-block;
+    margin-top: 27px;
+    margin-right: -0.25em;
+    color: #ccc
+}
+
+#bar .ville .where {
+    text-align: left;
+    padding-left: 11px;
+    line-height: 42px;
+    margin: auto;
+}
+
+#bar .sejour {
+    height: 42px;
+    width: 302px;
+    line-height: 42px;
+    border-top: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+    background-color: #FFF;
+    display: inline-block;
+    margin-top: 27px;
+    margin-right: -0.25em;
+    color: #9A9A9A;
+}
+
+#bar .sejour .arrivee {
+    float: left;
+    padding-left: 11px;
+    line-height: 42px;
+    margin: auto;
+    display: inline-block;
+}
+
+#bar .sejour .fleche {
+    text-align: center;
+    line-height: 42px;
+    margin: auto;
+    display: inline-block;
+    margin-left: -36px;
+}
+
+#bar .sejour .fleche::after {
+    font-family: 'Airglyphs';
+    content: '\f113';
+    font-size: 24px;
+    vertical-align: -3px;
+    line-height: 1;
+}
+
+#bar .sejour .depart {
+    padding-left: 11px;
+    line-height: 42px;
+    margin: auto;
+    display: inline-block;
+}
+
+#bar .voyageurs {
+    height: 42px;
+    width: 146px;
+    line-height: 42px;
+    border: 1px solid #bbbbbb;
+    background-color: #FFF;
+    display: inline-block;
+    margin-top: 27px;
+    margin-right: -0.25em;
+    color: #9A9A9A;
+}
+
+#bar .voyageurs .texte {
+    text-align: left;
+    padding-left: 11px;
+    line-height: 42px;
+    margin: auto;
+    display: inline-block;
+    width: 104px;
+}
+
+#bar .voyageurs .down {
+    text-align: right;
+    padding-right: 11px;
+    line-height: 42px;
+    margin: auto;
+    display: inline-block;
+    font-size: 0.5em;
+}
+
+#bar .search {
+    height: 42px;
+    width: 141px;
+    line-height: 42px;
+    border-top: 1px solid #ff5a5f;
+    border-bottom: 1px solid #e00007;
+    border-right: 1px solid #ff5a5f;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #ff5a5f;
+    display: inline-block;
+    margin-top: 27px;
+    margin-right: -0.25em;
+    color: #fff;
+}
+
+#bar .search:hover {
+    background-color: #ff7e82;
+}
+
+#bar .search .texte {
+    text-align: center;
+    line-height: 42px;
+    margin: auto;
+    display: inline-block;
+}
+#second_bloc {
+    background-color: #edefed;
+}
+#bloc_seul {
+    margin: auto;
+    width: 1050px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#bloc_seul #photo {
+    background-image: url(../images/photo.jpg);
+    width: 655px;
+    height: 344px;
+    display: inline-block;
+    margin-right: -0.25em;
+}
+
+#bloc_seul #revenus {
+    background-color: white;
+    width: 344px;
+    height: 344px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#bloc_seul #revenus h1 {
+    color: #484848;
+    text-align: left;
+    padding: 39px 39px 10px 39px;
+    font-size: 25px;
+}
+
+#bloc_seul #revenus h2 {
+    color: #484848;
+    text-align: left;
+    padding: 0 39px 10px 39px;
+    font-size: 16px;
+    font-weight: 200;
+    padding-bottom: 18px;
+}
+
+#bloc_seul #revenus p {
+    margin: auto;
+    width: 266px;
+    height: 42px;
+    background-color: #007a87;
+    border-bottom: 1px solid #004f58;
+    border-top: 1px solid #007A87;
+    border-left: 1px solid #007A87;
+    border-right: 1px solid #007A87;
+    border-radius: 2px;
+    line-height: 42px;
+}
+
+#comment {
+    margin: auto;
+    margin-top: 45px;
+    color: #484848;
+    text-align: center;
+}
+
+#comment h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: auto;
+}
+
+#comment p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+#destinations {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 1050px;
+    height: 344px;
+}
+
+#destinations .reykjavik {
+    background-image: url(../images/reykjavik.jpg);
+    width: 316px;
+    height: 344px;
+    text-align: center;
+    line-height: 344px;
+    display: inline-block;
+    margin: 0 12px 0 12px;
+    font-size: 32px;
+}
+
+#destinations .barcelone {
+    background-image: url(../images/barcelone.jpg);
+    width: 316px;
+    height: 344px;
+    text-align: center;
+    line-height: 344px;
+    display: inline-block;
+    margin: 0 12px 0 12px;
+    font-size: 32px;
+}
+
+#destinations .venise {
+    background-image: url(../images/venise.jpg);
+    width: 316px;
+    height: 344px;
+    text-align: center;
+    line-height: 344px;
+    display: inline-block;
+    margin: 0 12px 0 12px;
+    font-size: 32px;
+}
+
+#destinations div p {
+    margin: auto;
+}
+
+#signature {
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}
+
+#signature a, #signature a:visited {
+    color: #9C9C9C;
+    text-decoration: none;
+    cursor: help;
+}
+
+#signature a:hover {
+    text-shadow: 1px 2px 3px rgba(156,156,156, 0.5);
+}

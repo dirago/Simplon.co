@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Présentation de mon TOP 3</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="css/animate.css">
+        <script src="javascript/script.js"></script>
+    </head>
+    <body>
+        <div id="main_wrapper">
+            <div id="header">
+                <nav id="nav" style="display: none;">
+                    <ul id="ul">
+                        <li id="liColor" class="animated bounceIn" onclick="afficheAllPix()">- Accueil -</li>
+                        <li id="liColor2" class="animated bounceIn" onclick="cacher23()">1 - Akaru</li>
+                        <li id="liColor3" class="animated bounceIn" onclick="cacher13()">2 - Jam3</li>
+                        <li id="liColor4" class="animated bounceIn" onclick="cacher12()">3 - Diadora</li>
+                    </ul>
+                </nav>
+                <script>afficherMenu()</script>
+                <div class="signature">
+                    <a href="https://github.com/dirago">DRg 2016</a>
+                </div>
+            </div>
+            <div id="firstPix" style="visibility: visible;" onclick="cacher23()">
+                <div id="blackRank1" style="visibility: visible"><p>1</p></div>
+                <img src="images/1.jpg" alt="Photo site numéro 1"/>
+            </div>
+            <img id="logoAkaru" class="animated fadeInLeftBig" style="visibility: visible;" src="images/akaru_menu.png" />
+            <div id="commentFirstPix" style="visibility: hidden;">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                <p>Akaru est une agence digitale lyonnaise</p>
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <p>Un site au design épuré, des animations de folie et une prise de controle par mobile</p>
+                <p>Difficile de ne pas tomber sous le charme de ce site ultra intéractif, doté d'un design
+                tiré à quatre épingles, sans fioritures, chaque élément prend sa place et l'oeil va là où
+                il le faut. Le genre de site vitrine qui donne envie de pousser la porte !</p>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                <a href="http://www.akaru.fr/" target="_blank">Jeter un oeil</a>
+            </div>
+            <div id="secondPix" style="visibility: visible;" onclick="cacher13()">
+                <div id="blackRank2"><p>2</p></div>
+                <img src="images/2.jpg" alt="Photo site numéro 2" />
+            </div>
+            <img src="images/jam3-logo.png" id="logoJam3" class="animated fadeInRightBig" style="visibility: visible;"/>
+            <div id="commentSecondPix" style="visibility: hidden;">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                <p>Jam3 est une agence digitale canadienne</p>
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <p>Une interface graphique et des effets délirants, un poil old school mais tellement fun</p>
+                <p>L'effet sur le titre central m'a conquis et inaugurait une expérience fort sympathique, j'ai aimé
+                leur photo de groupe qui se veut troublante mais dotée d'une mise en scène parfaite. Leur portfolio
+                est simple mais accessible de par le tri, franchement agréable.</p>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                <a href="http://www.jam3.com/" target="_blank">Jeter un oeil</a>
+            </div>
+            <div id="thirdPix" style="visibility: visible;" onclick="cacher12()">
+                <div id="blackRank3"><p>3</p></div>
+                <img src="images/3.jpg" alt="Photo site numéro 3" />
+            </div>
+            <img src="images/logo-diadora.svg" id="logoDiadora" class="animated fadeInRightBig" style="visibility: visible;"/>
+            <div id="commentThirdPix" style="visibility: hidden;">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                <p>Diadora est une marque Sportswear</p>
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <p>Le seul <span class="italic">not-an-agency</span> du top 3, une homepage brillamment conçue et encore des effets au top</p>
+                <p>Le site présente une course aux allures de marathon et les designers ont réussi le pari de nous
+                faire comprendre ça en une seconde. </p>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                <a href="http://makeitbright.diadora.com/" target="_blank">Jeter un oeil</a>
+            </div>
+        </div>
+    </body>
+</html>

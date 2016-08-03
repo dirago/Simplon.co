@@ -1,0 +1,122 @@
+* {
+    margin: 0 auto;
+}
+body {
+    background: url(images/BG.jpg) no-repeat;
+    font-family: Helvetica, sans-serif;
+    position: relative;
+}
+header {
+    position: relative;
+}
+header #logo {
+    width: 250px;
+    margin: auto;
+}
+header #logo img {
+    width: 250px;
+    height: auto;
+}
+header .nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 4px;
+}
+header .nav p {
+    width: 130px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.43);
+    color: rgba(255, 255, 255, 0.57);
+    border-radius: 4px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+header .nav p:hover {
+    color: #fff;
+    cursor: pointer;
+}
+header .nav i {
+    margin-right: 8px;
+}
+#formulaire {
+    width: 900px;
+    background-color: rgba(140, 135, 117, 0.18);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 9px hsla(0, 0%, 0%, 0.52);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    padding: 40px 0;
+}
+#formulaire .connexion {
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#formulaire .logIn {
+    width: 50%;
+    box-sizing: border-box;
+}
+#formulaire .logIn fieldset {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+}
+#formulaire .logIn fieldset div {
+    text-align: right;
+    margin-bottom: 10px;
+}
+#formulaire .logIn #log {
+    margin-top: 10px;
+}
+#formulaire .logIn label {
+    font-size: 0.9em;
+}
+#formulaire .logIn input {
+    height: 13px;
+    padding: 5px;
+}
+#formulaire .logIn fieldset #memo {
+    margin: 5px 90px 0 0;
+}
+#formulaire .logIn fieldset #memo .checkMemo {
+    vertical-align: middle;
+}
+#formulaire .logIn fieldset #memo .memoText {
+    font-size: 0.7em;
+}
+#formulaire .logIn .btns {
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+}
+#formulaire .btns .btn_co {
+    background-color: #737373;
+    color: #FFF;
+    height: auto;
+    text-align: center;
+    line-height: 15px;
+    vertical-align: middle;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    padding: 5px 20px;
+    font-weight: bold;
+}
+#formulaire .btns .btn_co:hover {
+    background-color: #916445;
+    color: #ffffff;
+}
+#formulaire .btns .btn_lose {
+    background-color: #e4e4e4;
+    color: #737373;
+    height: auto;
+    text-align: center;
+    line-height: 15px;
+    vertical-align: middle;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    padding: 5px 20px;
+}

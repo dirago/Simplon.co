@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulaire d'identification</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/logoBlack.png" />
+        </div>
+        <div id="navSi">
+            <div class="navSign">
+                <p onclick="showSign();"><i class="fa fa-lock" aria-hidden="true"></i>Sign Up</p>
+            </div>
+            <div class="navLog">
+                <p onclick="showLog();"><i class="fa fa-lock" aria-hidden="true"></i>Log In</p>
+            </div>
+        </div>
+        <div id="navCo">
+            <div class="navLogged">
+                <p><i class="fa fa-unlock" aria-hidden="true"></i>Logged</p>
+            </div>
+        </div>
+    </header>
+    <div id="formulaire">
+        <div id="connexion">
+            <h2>Connexion</h2>
+        </div>
+        <div id="wlcm">
+        </div>
+        <div id="logIn">
+            <fieldset>
+                <label for="login">
+                    <span class="login">Login (e-mail) :</span>
+                    <input id="login" type="text" size="40" placeholder="Saisissez votre pseudo" required/>
+                </label>
+                <label for="mdp">
+                    <span>Mot de passe :</span>
+                    <input id="password" type="password" size="40" placeholder="Saisissez votre mot de passe" required/>
+                </label>
+                <label for="memopassword" id="memo">
+                    <input id="memopassword" type="checkbox">
+                    <span class="memoText">Mémoriser votre mot de passe</span>
+                    <div id="erreur" style="visibility: hidden"></div>
+                </label>
+                <div class="btns">
+                    <input type="button" value="Mot de passe perdu ?" id="btn_lose">
+                    <input type="submit" value="Se connecter" id="btn_co" onclick="logIn();">
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div id="formulaireInscription">
+        <div id="inscription">
+            <h2>Inscription</h2>
+        </div>
+        <div id="wlcmNew">
+        </div>
+        <div id="signIn">
+            <fieldset>
+                <label for="prenom">
+                    <span>Prénom :</span>
+                    <input id="prenomNew" type="text" size="40" placeholder="Saisissez votre prénom" required/>
+                </label>
+                <label for="login">
+                    <span>Login (e-mail) :</span>
+                    <input id="loginNew" type="text" size="40" placeholder="Saisissez votre pseudo" required/>
+                </label>
+                <label for="mdp">
+                    <span>Mot de passe :</span>
+                    <input id="passwordNew" type="password" size="40" placeholder="Saisissez votre mot de passe" required/>
+                </label>
+                <label for="memopassword" id="memo">
+                    <input id="memopassword" type="checkbox">
+                    <span class="memoText">Mémoriser votre mot de passe</span>
+                    <div id="erreurNew" style="visibility: hidden"></div>
+                </label>
+                <div class="btns">
+                    <input type="submit" value="S'inscrire" id="btn_si" onclick="signIn();">
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

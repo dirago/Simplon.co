@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Moyenne 2.0</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="main">
+        <h1 id="titre">Moyenne de votre classe</h1>
+        <div id="blocNotes">
+            <form method="post">
+                <div id="notesCol1">
+                    <label for="note1">Note 1 :</label>
+                    <input id=note1 type="text" name="note1" placeholder="/20" required>
+                    <label for="note2">Note 2 :</label>
+                    <input id=note2 type="text" name="note2" placeholder="/20" required>
+                    <label for="note3">Note 3 :</label>
+                    <input id=note3 type="text" name="note3" placeholder="/20" required>
+                    <label for="note4">Note 4 :</label>
+                    <input id=note4 type="text" name="note4" placeholder="/20" required>
+                    <label for="note5">Note 5 :</label>
+                    <input id=note5 type="text" name="note5" placeholder="/20" required>
+                </div>
+                <div id="notesCol2">
+                    <label for="note6">Note 6 :</label>
+                    <input id=note6 type="text" name="note6" placeholder="/20" required>
+                    <label for="note7">Note 7 :</label>
+                    <input id=note7 type="text" name="note7" placeholder="/20" required>
+                    <label for="note8">Note 8 :</label>
+                    <input id=note8 type="text" name="note8" placeholder="/20" required>
+                    <label for="note9">Note 9 :</label>
+                    <input id=note9 type="text" name="note9" placeholder="/20" required>
+                    <label for="note10">Note 10 :</label>
+                    <input id=note10 type="text" name="note10" placeholder="/20" required>
+
+                </div>
+                <input id="submit" type="submit" name="envoyer" value="Calculer" onclick="calculMoyenne(); return false">
+            </form>
+        </div>
+        <div id="moyenne">
+            <p id="message">La moyenne de votre classe est de</p>
+            <p id="messageMoyenne"></p>
+            <p id="erreur"></p>
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+    </div>
+
+</body>
+
+</html>

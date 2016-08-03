@@ -1,0 +1,393 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    background-color: rgba(189, 184, 177, 0.42);
+}
+#main_wrapper {
+    height: 100%;
+    position: relative;
+}
+#main_wrapper #logoAkaru {
+    position: absolute;
+    top: 237px;
+    left: 235px;
+}
+#main_wrapper #logoJam3 {
+    width: 51px;
+    height: 23px;
+    position: absolute;
+    top: 608px;
+    left: 813px;
+}
+#main_wrapper #logoDiadora {
+    width: 113px;
+    height: 10px;
+    position: absolute;
+    left: 1011px;
+    top: 609px;
+}
+#header {
+    position: relative;
+    height: 100%;
+    width: 150px;
+    background-color: rgb(189, 184, 177);
+    text-align: center;
+    display: inline-block;
+}
+#header i {
+    color: hsla(35,8%,61%,1);
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: x-large;
+}
+#header i:hover {
+    color: #FFF;
+    margin-top: 30px;
+    font-size: x-large;
+    cursor: crosshair;
+}
+#header #nav {
+    margin-top: 100px;
+    text-align: left;
+}
+#header #nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+    border-left: 5px solid #FFF;
+}
+#header #nav ul li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #FFF;
+}
+#header #nav ul li:hover {
+    font-weight: bold;
+    cursor: crosshair;
+}
+#header #nav ul li:nth-child(1) {
+    margin-bottom: 50px;
+}
+#header #nav ul li:nth-child(2) {
+    animation-duration: 0.75s;
+    animation-delay: 0.5s;
+}
+#header #nav ul li:nth-child(3) {
+    animation-duration: 0.75s;
+    animation-delay: 1s;
+}
+#header #nav ul li:nth-child(4) {
+    animation-duration: 0.75s;
+    animation-delay: 1.5s;
+}
+#header .signature {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    font-size: 0.8em;
+}
+#header .signature a {
+    color: hsla(35,8%,61%,1);
+}
+#header .signature a:hover {
+    text-decoration: none;
+    color: hsla(31, 6%, 47%, 1);
+    cursor: crosshair;
+}
+#firstPix {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 26%;
+}
+#firstPix img {
+    position: relative;
+    width: 800px;
+    height: auto;
+    border: 6px solid #fff;
+    z-index: 1;
+}
+#firstPix img:hover {
+    box-shadow: 0px 0px 18px #202020;
+    z-index: 3;
+}
+#commentFirstPix {
+    display: inline-block;
+    position: absolute;
+    width: 812px;
+    height: 230px;
+    top: 480px;
+    left: 26%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    box-shadow: 0px 0px 10px #202020;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#commentFirstPix:hover {
+    box-shadow: 0px 0px 20px #202020;
+}
+#commentFirstPix .animated.tada {
+    animation-duration: 0.75s;
+    animation-delay: 1.5s;
+}
+#commentFirstPix i {
+    font-size: 2.5em;
+    position: absolute;
+}
+#commentFirstPix .fa.fa-heart {
+    top: 70px;
+    left: 17px;
+}
+#commentFirstPix .fa.fa-eye {
+    top: 164px;
+    left: 39%;
+}
+#commentFirstPix p:nth-child(2) {
+    position: absolute;
+    left: 70px;
+    margin: 12px 0 0 0;
+}
+#commentFirstPix p:nth-child(4) {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    margin: 12px 0 0 0;
+}
+#commentFirstPix p:nth-child(5) {
+    position: absolute;
+    top: 105px;
+    left: 70px;
+    margin: 12px 0 0 0;
+    font-size: 0.8em;
+    color: #D2D2D2;
+    padding-right: 20px;
+}
+#commentFirstPix a {
+    color: #fff;
+    cursor: help;
+    position: absolute;
+    top: 176px;
+    left: 46%;
+    text-decoration: none;
+    border-bottom: 1px dashed #fff;
+}
+#commentFirstPix a:hover {
+    color: #fff;
+}
+#commentFirstPix a:visited {
+    color: #fff;
+}
+#secondPix {
+    display: inline-block;
+    position: absolute;
+    top: 408px;
+    left: 12%;
+}
+#secondPix img {
+    position: relative;
+    width: 600px;
+    height: auto;
+    border: 6px solid #fff;
+    z-index: 1;
+}
+#secondPix img:hover {
+    box-shadow: 0px 0px 18px rgba(158, 253, 252, 0.56);
+    z-index: 3;
+}
+#commentSecondPix {
+    display: inline-block;
+    position: absolute;
+    width: 812px;
+    height: 230px;
+    top: 90px;
+    left: 26%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    box-shadow: 0px 0px 10px #202020;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#commentSecondPix:hover {
+    box-shadow: 0px 0px 20px #202020;
+}
+#commentSecondPix .animated.tada {
+    animation-duration: 0.75s;
+    animation-delay: 1.5s;
+}
+#commentSecondPix i {
+    font-size: 2.5em;
+    position: absolute;
+}
+#commentSecondPix .fa.fa-heart {
+    top: 70px;
+    left: 17px;
+}
+#commentSecondPix .fa.fa-eye {
+    top: 164px;
+    left: 39%;
+}
+#commentSecondPix p:nth-child(2) {
+    position: absolute;
+    left: 70px;
+    margin: 12px 0 0 0;
+}
+#commentSecondPix p:nth-child(4) {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    margin: 12px 0 0 0;
+}
+#commentSecondPix p:nth-child(5) {
+    position: absolute;
+    top: 105px;
+    left: 70px;
+    margin: 12px 0 0 0;
+    font-size: 0.8em;
+    color: #D2D2D2;
+    padding-right: 20px;
+}
+#commentSecondPix a {
+    color: #fff;
+    cursor: help;
+    position: absolute;
+    top: 176px;
+    left: 46%;
+    text-decoration: none;
+    border-bottom: 1px dashed #fff;
+}
+#commentSecondPix a:hover {
+    color: #fff;
+}
+#commentSecondPix a:visited {
+    color: #fff;
+}
+#thirdPix {
+    display: inline-block;
+    position: absolute;
+    top: 375px;
+    left: 70%;
+}
+#thirdPix img {
+    position: relative;
+    width: 400px;
+    height: auto;
+    border: 6px solid #fff;
+    z-index: 1;
+}
+#thirdPix img:hover {
+    box-shadow: 0px 0px 18px rgba(249, 237, 53, 0.43);
+    z-index: 4;
+}
+#commentThirdPix {
+    display: inline-block;
+    position: absolute;
+    width: 812px;
+    height: 230px;
+    top: 90px;
+    left: 26%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    box-shadow: 0px 0px 10px #202020;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#commentThirdPix:hover {
+    box-shadow: 0px 0px 20px #202020;
+}
+#commentThirdPix .animated.tada {
+    animation-duration: 0.75s;
+    animation-delay: 1.5s;
+}
+#commentThirdPix i {
+    font-size: 2.5em;
+    position: absolute;
+}
+#commentThirdPix .fa.fa-heart {
+    top: 70px;
+    left: 17px;
+}
+#commentThirdPix .fa.fa-eye {
+    top: 164px;
+    left: 39%;
+}
+#commentThirdPix p:nth-child(2) {
+    position: absolute;
+    left: 70px;
+    margin: 12px 0 0 0;
+}
+#commentThirdPix p:nth-child(4) {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    margin: 12px 0 0 0;
+}
+#commentThirdPix p:nth-child(5) {
+    position: absolute;
+    top: 105px;
+    left: 70px;
+    margin: 12px 0 0 0;
+    font-size: 0.8em;
+    color: #D2D2D2;
+    padding-right: 20px;
+}
+#commentThirdPix a {
+    color: #fff;
+    cursor: help;
+    position: absolute;
+    top: 176px;
+    left: 46%;
+    text-decoration: none;
+    border-bottom: 1px dashed #fff;
+}
+#commentThirdPix a:hover {
+    color: #fff;
+}
+#commentThirdPix a:visited {
+    color: #fff;
+}
+#blackRank1 {
+    position: absolute;
+    width: 812px;
+    height: 404px;
+    line-height: 404px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+#blackRank2 {
+    position: absolute;
+    width: 612px;
+    height: 306px;
+    line-height: 306px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+#blackRank3 {
+    position: absolute;
+    width: 412px;
+    height: 208px;
+    line-height: 208px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+#blackRank1:hover, #blackRank2:hover, #blackRank3:hover {
+    display: none;
+}
+#blackRank1 p, #blackRank2 p, #blackRank3 p {
+    color: rgba(189, 184, 177, 0.61);
+    font-size: 4em;
+    margin: auto;
+}
+.italic {
+    font-style: italic;
+}

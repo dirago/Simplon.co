@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Airbnb</title>
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="videoFS" style="display: none;" onclick="pauseVideo2();">
+            <video id="video2" src="video/videoFullScreen.mp4"></video>
+            <i id="btn_play"></i>
+            <a onclick="killForVideo2();"><span></span></a>
+        </div>
+        <div id="first_bloc" style="display: block;">
+            <video id="video1" src="video/videobg.mp4" autoplay></video>
+            <div id="top_bar">
+                <div id="logo">
+                    <img src="images/logo.png">
+                </div>
+                <div id="menu">
+                    <p id="hote" class="elmt_menu">Devenez hôte</p>
+                    <p class="elmt_menu">Aide</p>
+                    <p class="elmt_menu">Inscription</p>
+                    <p class="elmt_menu">Connexion</p>
+                </div>
+            </div>
+            <div id="texte">
+                <h1>vivez là-bas</h1>
+                <p>Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas, comme chez vous.</p>
+                <span onclick="killForVideo2();"></span>
+            </div>
+            <div id="foot_bar">
+                <div id="bar">
+                    <div class="ville">
+                        <p class="where">Où ?</p>
+                    </div>
+                    <div class="sejour">
+                        <p class="arrivee">Arrivée</p>
+                        <p class="fleche"></p>
+                        <p class="depart">Départ</p>
+                    </div>
+                    <div class="voyageurs">
+                        <p class="texte">1 voyageur</p>
+                        <p class="down">&#9660;</p>
+                    </div>
+                    <div class="search">
+                        <p class="texte">Rechercher</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="second_bloc" style="display: block;">
+            <div id="bloc_seul">
+                <div id="photo">
+                </div>
+                <div id="revenus">
+                    <h1>Ouvrez la porte à un voyageur et à une nouvelle vie</h1>
+                    <h2>Gagnez de l'argent en accueillant des voyageurs.</h2>
+                    <p>Estimer mes revenus</p>
+                </div>
+            </div>
+            <div id="comment">
+                <h2>Juste pour le week-end</h2>
+                <p>Découvrez de nouveaux logements incroyables près de chez vous.</p>
+            </div>
+            <div id="destinations">
+                <div class="reykjavik">
+                    <p>Reykjavik</p>
+                </div>
+                <div class="barcelone">
+                    <p>Barcelone</p>
+                </div>
+                <div class="venise">
+                    <p>Venise</p>
+                </div>
+            </div>
+            <div id="signature">
+                <p>Réalisé par <a href="https://github.com/dirago" target="_blank">Raphaël Di Rago</a> pour Simplon.co Lyon</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;;
+    margin: auto;
+}
+
+#menu{
+    display: flex;
+    left: 0;
+    width: 80%;
+    background-color: #000;
+    padding-left: 50px;
+    margin-bottom: 40px;
+    position: fixed;
+}
+
+.menu {
+    display: flex;
+    color: #888;
+}
+
+.logo {
+    padding-right: 60px;
+}
+
+.element_menu {
+    padding-left: 20px;
+}
+
+#corps {
+    padding-top: 80px;
+    padding-left: 50px;
+}
+
+#titre {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: -13px;
+}
+
+.titre {
+    display: flex;
+    padding-right: 10px;
+}
+
+.sous-titre {
+    display: flex;
+    color: #ccc;
+    font-size: 1em;
+}
+
+#projet {
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-top: 1px solid #ECECEC;
+    width: 80%;
+}
+
+.image {
+    display: flex;
+    margin-right: 40px;
+    box-shadow: 0 0 14px #ccc;
+}
+
+.image:hover {
+    box-shadow: 0 0 14px #888;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.bouton {
+    display: block;
+    width: 130px;
+    height: 39px;
+    background-color: #f5b675;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 39px;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+}

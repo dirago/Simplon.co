@@ -1,0 +1,96 @@
+html, body {
+    margin: 0 auto;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Helvetica', sans-serif;
+    background-color: rgb(235, 229, 215);
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 600px;
+    height: 500px;
+    background-color: rgb(226, 206, 167);
+    border: 1px solid rgb(167, 151, 119);
+    border-radius: 3px;
+    color: black;
+    box-sizing: border-box;
+    padding: 20px;
+}
+#main h1#titre {
+    display: flex;
+    align-self: center;
+    margin-bottom: 40px;
+}
+#blocNotes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#notesCol1, #notesCol2 {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#notesCol1 label {
+    display: flex;
+    align-self: center;
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+#notesCol2 label {
+    display: flex;
+    align-self: center;
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+#notesCol1 input, #notesCol2 input {
+    width: 50px;
+    height: 20px;
+    margin-left: 10px;
+}
+#notesCol2 #note10 {
+    margin-left: 5px;
+}
+#submit {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+#moyenne {
+    display: flex;
+    flex: 1;
+    align-self: center;
+    margin-top: 10px;
+    width: 500px;
+    background-color: rgb(167, 151, 119);
+    border-radius: 3px;
+    border: 1px solid rgb(97, 89, 74);
+}
+#moyenne p {
+    margin: auto;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+#message {
+    display: none;
+}
+#messageMoyenne {
+    display: none;
+    font-size: 3em;
+}

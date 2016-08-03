@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulaire d'identification</title>
+        <link type="text/css" rel="stylesheet" href="style.css"/>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+        <div id="logo">
+            <img src="images/logoBlack.png"/>
+        </div>
+        <div class="nav">
+            <p><i class="fa fa-lock" aria-hidden="true"></i>Log In</p>
+        </div>
+        </header>
+        <div id="formulaire">
+            <div class="connexion">
+                <h2>Connexion</h2>
+            </div>
+            <div class="logIn">
+                <fieldset>
+                    <div id="log">
+                        <label for="login" class="login">Login :</label>
+                        <input id="login" type="text" size="40" name="login" placeholder="Saisissez votre pseudo">
+                    </div>
+                    <div>
+                        <label for="mdp" class="mdp">Mot de passe :</label>
+                        <input id="mdp" type="password" size="40" name="mdp" placeholder="Saisissez votre mot de passe">
+                    </div>
+                    <div id="memo">
+                        <input id="memomdp" type="checkbox" name="memomdp" class="checkMemo">
+                        <label for="memomdp" class="memoText">Mémoriser votre mot de passe</label>
+                    </div>
+                    <div class="btns">
+                        <input type="button" name="name" value="Mot de passe perdu ?" class="btn_lose">
+                        <input type="button" name="name" value="Se connecter" class="btn_co">
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </body>
+</html>

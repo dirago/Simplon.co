@@ -1,0 +1,244 @@
+* {
+    margin: 0 auto;
+}
+body {
+    background: url(images/BG.jpg) no-repeat;
+    font-family: Helvetica, sans-serif;
+    position: relative;
+}
+header {
+    position: relative;
+}
+header #logo {
+    width: 250px;
+    margin: auto;
+}
+header #logo img {
+    width: 250px;
+    height: auto;
+}
+header #navSi p {
+    width: 130px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.43);
+    color: rgba(255, 255, 255, 0.57);
+    border-radius: 0 0 10px 10px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+header #navSi p:hover {
+    color: #fff;
+    cursor: pointer;
+}
+header #navSi i {
+    margin-right: 8px;
+}
+header .navSign {
+    position: absolute;
+    top: 0;
+    right: 165px;
+}
+header .navLog {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+header #navCo {
+    display: none;
+}
+header #navCo p {
+    width: 130px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.43);
+    color: #4caf50;
+    border-radius: 0 0 10px 10px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+header #navCo p:hover {
+    color: #fff;
+    cursor: not-allowed;
+}
+header #navCo i {
+    margin-right: 8px;
+}
+header .navLogged {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+#formulaire {
+    width: 900px;
+    background-color: rgba(140, 135, 117, 0.18);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 9px hsla(0, 0%, 0%, 0.52);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    padding: 40px 0;
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+#formulaireInscription {
+    width: 900px;
+    background-color: rgba(140, 135, 117, 0.18);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 9px hsla(0, 0%, 0%, 0.52);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    padding: 40px 0;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    display: none;
+}
+#wlcm {
+    display: none;
+    position: relative;
+    color: #4caf50;
+    font-size: 2em;
+}
+#wlcmNew {
+    display: none;
+    position: relative;
+    color: #4caf50;
+    font-size: 1.5em;
+}
+#erreur {
+    width: 391px;
+    height: 20px;
+    line-height: 20px;
+    color: red;
+    margin-right: 0;
+    margin-top: 10px;
+    font-size: 0.8em;
+    text-align: right;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+#erreurNew {
+    width: 391px;
+    height: 20px;
+    line-height: 20px;
+    color: red;
+    margin-right: 0;
+    margin-top: 10px;
+    font-size: 0.8em;
+    text-align: right;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+#formulaire #connexion {
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#formulaireInscription #inscription {
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: none;
+}
+#formulaire #logIn {
+    width: 50%;
+    box-sizing: border-box;
+}
+#formulaireInscription #signIn {
+    width: 50%;
+    box-sizing: border-box;
+    display: none;
+}
+#formulaire #logIn fieldset {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+}
+#formulaireInscription #signIn fieldset {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+}
+#formulaire label {
+    text-align: right;
+    display: block;
+    margin: 5px 0 5px 0;
+}
+#formulaire span {
+    font-size: 0.9em;
+}
+#formulaire input {
+    height: 13px;
+    padding: 5px;
+}
+#formulaire .memoText {
+    font-size: 0.7em;
+}
+#formulaireInscription label {
+    text-align: right;
+    display: block;
+    margin: 5px 0 5px 0;
+}
+#formulaireInscription span {
+    font-size: 0.9em;
+}
+#formulaireInscription input {
+    height: 13px;
+    padding: 5px;
+}
+#formulaireInscription .memoText {
+    font-size: 0.7em;
+}
+.btns {
+    display: inline-block;
+    float: right;
+    margin-top: 4px;
+}
+input#btn_co {
+    background-color: #737373;
+    color: #FFF;
+    height: auto;
+    text-align: center;
+    line-height: 15px;
+    vertical-align: middle;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    padding: 5px 20px;
+    font-weight: bold;
+}
+input#btn_co:hover {
+    background-color: #916445;
+    color: #ffffff;
+}
+input#btn_si {
+    background-color: #737373;
+    color: #FFF;
+    height: auto;
+    text-align: center;
+    line-height: 15px;
+    vertical-align: middle;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    padding: 5px 20px;
+    font-weight: bold;
+}
+input#btn_si:hover {
+    background-color: #e91e63;
+    color: #ffffff;
+}
+input#btn_lose {
+    background-color: #e4e4e4;
+    color: #737373;
+    height: auto;
+    text-align: center;
+    line-height: 15px;
+    vertical-align: middle;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    padding: 5px 20px;
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>De quelle couleur...</title>
+</head>
+<body>
+<script type="text/javascript">
+    var proceed = true;
+
+    while(proceed) {
+        // on affiche la question
+        var reponseQuestion1 = prompt("De quelle couleur est le cheval blanc d'Henri IV");
+        console.log('reponseQuestion1', reponseQuestion1); // on affiche la réponse dans la console
+        // si la réponse donnée est "blanc"
+        reponseQuestion1 = reponseQuestion1.toLowerCase();
+        if(reponseQuestion1 == "blanc"){
+            // FIXED : gérer la casse : Blanc BLANC...
+            alert('Bravo');
+            // affichage de la 2nde question
+            while(second) {
+                var reponseQuestion2 = prompt('Combien y a t il de sept nains ?');
+                // si la réponse données est 7
+                if (isNaN(parseInt(reponseQuestion2))) {
+                    if (reponseQuestion2.toLowerCase() === "sept") {
+                        alert('Bravo ! Vous avez terminé ce jeu !');
+                        second = false;
+                        first = false;
+                    }
+                    else {
+                        alert('Erreur, réessayez !');
+                    }
+                }
+                else if (!isNaN(parseInt(reponseQuestion2))) {
+                    if (parseInt(reponseQuestion2) == 7){
+                        // FIXED : gérer les réponses textuelles, avec différentes casses...
+                        // FIXED : gérer les réponses de types 7, 07, 007, 7.0
+                        alert('Bravo ! Vous avez terminé ce jeu !');
+                        second = false;
+                        first = false;
+                    }
+                    else {
+                        alert('Erreur, réessayez !');
+                    }
+                }
+                else {
+                    alert('Erreur de syntaxe, réessayez !');
+                }
+            }
+        } else {
+            alert('Erreur, réessayez !');
+        }
+    }
+</script>
+
+
+</body>
+</html>

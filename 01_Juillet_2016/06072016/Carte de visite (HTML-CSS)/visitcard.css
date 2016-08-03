@@ -1,0 +1,99 @@
+body {
+  margin: 0 auto;
+  padding: 10%;
+  font-family: Helvetica;
+}
+
+a {
+  color: #5db2d3;
+}
+#blockcard {
+  display: block;
+  height: 419px;
+  width: 732px;
+  background-color: #eff3f4;
+  box-shadow: 0px 0px 5px #383838;
+  margin: 0 auto;
+  position: relative;
+}
+
+#card {
+  display: block;
+  height: 223px;
+  width: 482px;
+  margin: auto;
+  box-shadow: 0px 0px 7px rgba(136, 136, 136, 0.63);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.first_part {
+  display: block;
+  background-color: white;
+  height: 158px;
+}
+
+.logo {
+  background-image: url(logo.jpg);
+  width: 85px;
+  height: 59px;
+  position: absolute;
+  top: 28px;
+  right: 26px;
+}
+
+.upfirst {
+  position: relative;;
+  top: 37px;
+  left: 20px;
+}
+
+.downfirst {
+  display: inline-block;
+  position: relative;
+  top: 40px;
+  left: 20px;
+}
+
+.second_part {
+  display: block;
+  background-color: #eaecef;
+  height: 65px;
+}
+
+.mailto {
+  display: inline-block;
+  position: relative;
+  top: 35%;
+  left: 5%;
+}
+
+.tel {
+  display: inline-block;
+  position: relative;
+  top: 35%;
+  left: 30%;
+}
+
+.first_part h1 {
+  color: #444444;
+  margin: auto;
+}
+
+.first_part h2 {
+  color: #888888;
+  display: inline-block;
+}
+
+.first_part h3 {
+  color: #cccccc;
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+p {
+  margin: auto;
+}
