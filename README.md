@@ -1,6 +1,6 @@
 # Simplon.co
 
-![Simplon logo](http://lyon.simplon.co/wp-content/uploads/2015/08/142326-Simplon-logo-simplon.lyon_-300x110.jpg "simplon logo")
+<p align="center">![Simplon logo](http://lyon.simplon.co/wp-content/uploads/2015/08/142326-Simplon-logo-simplon.lyon_-300x110.jpg "simplon logo")</p>
 
 ## Formation Developpeur Web - 1ère partie (04/07/2016 - 27/01/2017)
 
