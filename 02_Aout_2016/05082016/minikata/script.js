@@ -71,7 +71,7 @@ console.log('tous les mails sont gmail : ', test.toString() ); // false
 // mettre les mails en minuscules
 var mailsMinuscule = [] ;
 for( var i = 0 ; i < mails.length ; i++ ){
-    mailsMinuscule.push(mails[i].toLowerCase())
+    mailsMinuscule.push(mails[i].toLowerCase());
 }
 console.log('mails en minuscules', mailsMinuscule.toString() );
 
