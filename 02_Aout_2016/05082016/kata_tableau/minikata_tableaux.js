@@ -3,7 +3,7 @@ var prenom = "paul";
 // TODO : ajouter une majuscule
 var prenomUpperCase = prenom.charAt(0).toUpperCase() + prenom.substring(1);
 
-console.log('prenom avec premiere lettre en majuscule', prenomUpperCase ); //Paul
+console.log('prenom avec premiere lettre en majuscule', prenomUpperCase); //Paul
 
 var users = ["joe", "lea", "bob", "ann"];
 
@@ -14,7 +14,7 @@ for (var i = 0; i < users.length; i++) {
     usersUp.push(newUser);
 }
 
-console.log('Prenoms avec premiere lettre en majuscule', usersUp ); //Joe, Lea, Bob, Ann
+console.log('Prenoms avec premiere lettre en majuscule', usersUp); //Joe, Lea, Bob, Ann
 
 // TODO : liste des prenoms qui commencent par une voyelle
 var listOfVoyels = [];
@@ -24,7 +24,7 @@ for (var i = 0; i < users.length; i++) {
     }
 }
 
-console.log('Prenoms qui commencent par une voyelle', listOfVoyels ); //ann
+console.log('Prenoms qui commencent par une voyelle', listOfVoyels); //ann
 
 // TODO : liste des prenoms qui commencent par une console
 var listOfCons = [];
@@ -34,7 +34,7 @@ for (var i = 0; i < users.length; i++) {
     }
 }
 
-console.log('Prenoms qui commencent par une consonne', listOfCons ); //joe, lea, bob
+console.log('Prenoms qui commencent par une consonne', listOfCons); //joe, lea, bob
 
 var notes = [10, 12, 13, 4, 8];
 
@@ -51,7 +51,7 @@ var total = 0;
 for (var i = 0; i < notes.length; i++) {
     total += notes[i];
 }
-var moyenne = total / notes.length
+var moyenne = total / notes.length;
 console.log('moyenne', moyenne); // 9,4
 
 var nouvelleNote = 12;
@@ -91,7 +91,7 @@ console.log('plus mauvaise note', worstGrade);
 
 
 // TODO : passage en fonctions
-function calculSomme( tableauDeNotes ){
+function calculSomme(tableauDeNotes) {
     var somme = 0;
 
     for (var i = 0; i < tableauDeNotes.length; i++) {
@@ -101,7 +101,7 @@ function calculSomme( tableauDeNotes ){
     return somme;
 }
 
-function calculMoyenne( tableauDeNotes ){
+function calculMoyenne(tableauDeNotes) {
     var moyenne;
     var total;
 
