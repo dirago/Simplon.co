@@ -1,0 +1,20 @@
+* {
+    margin: 0 auto;
+    font-family: 'Helvetica', sans-serif;
+}
+header {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #5fb4f1;
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid #86c7f6;
+}
+article#cadre {
+    background-color: #9bd4fc;
+    border: 1px solid #6798ba;
+    width: 600px;
+    height: 200px;
+    margin-top: 30px;
+}
