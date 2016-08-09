@@ -11,6 +11,7 @@ function play() {
     assigneChoix(userChoice);
     genereItemIA();
     whoWin();
+    playAgain();
 }
 
 function assigneChoix(n) {
@@ -80,4 +81,9 @@ function annonce() {
     } else {
         console.log("Egalité !");
     }
+}
+
+function playAgain() {
+    var choice = confirm('Vouslez-vous rejouer ?');
+    return choice ? play() : false;
 }

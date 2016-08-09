@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>Pierre, Feuille, Ciseaux</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/animate.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -12,13 +14,33 @@
         <p>Pierre, feuille, ciseaux</p>
     </header>
 
-    <article id="cadre">
-
-    </article>
-
+    <div id="sub_header">
+        <div id="show_you" class="show">Vous</div>
+        <div id="score" class="show">
+            <p id="scoreUser"></p>
+            <p id="separation"> - </p>
+            <p id="scoreOrdi"></p>
+        </div>
+        <div id="show_ordi" class="show">Ordinateur</div>
+    </div>
+    <div id="bandeau_affichage">
+        <div id="pixUser"></div>
+        <div id="cadre"></div>
+        <div id="pixOrdi"></div>
+    </div>
     <footer>
-        
+        <div id="left">
+            <img src="pix/pierre_vous.png" alt="pierre utilisateur" id="rock_left"/>
+            <img src="pix/feuille_vous.png" alt="feuille utilisateur" id="paper_left" />
+            <img src="pix/ciseaux_vous.png" alt="ciseaux utilisateur" id="scissor_left" />
+        </div>
+        <div id="right">
+            <img src="pix/pierre_ordi.png" alt="pierre ordinateur" id="rock_right"/>
+            <img src="pix/feuille_ordi.png" alt="feuille ordinateur" id="paper_right" />
+            <img src="pix/ciseaux_ordi.png" alt="ciseaux ordinateur" id="scissor_right" />
+        </div>
     </footer>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
