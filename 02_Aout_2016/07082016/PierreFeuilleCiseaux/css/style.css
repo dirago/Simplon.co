@@ -17,19 +17,22 @@ header {
     text-align: center;
     border-bottom: 5px solid #ecddc4;
 }
-div#sub_header {
+#sub_header {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
-div#score {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid #432d23;
-    color: #6c6c6c;
-    margin-top: 30px;
+#show_you {
+    padding-left: 10%;
 }
-div.show {
+#show_ordi {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+}
+.show {
+    display: flex;
+    flex-grow: 1;
     height: 40px;
     line-height: 40px;
     font-size: xx-large;
@@ -38,16 +41,34 @@ div.show {
     color: #e3cfae;
     margin-top: 100px;
 }
-div#bandeau-affichage {
+#bandeau_affichage {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
-div#cadre {
-    background-color: #ecddc4;
-    border: 1px solid #e3cfae;
+#pixUser {
+    display: flex;
+    align-items: center;
+}
+#cadre {
     width: 600px;
     height: 300px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#score {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    border-bottom: 1px solid #a8a8a8;
+    color: #6c6c6c;
+    margin-top: 0;
+}
+#pixOrdi {
+    display: flex;
+    align-items: center;
 }
 footer {
     display: flex;
@@ -56,14 +77,14 @@ footer {
     height: auto;
 }
 footer #left img {
-    width: 400px;
+    width: 300px;
     height: auto;
     position: absolute;
     bottom: 0;
     left: 0;
 }
 footer #right img {
-    width: 400px;
+    width: 300px;
     height: auto;
     position: absolute;
     bottom: 0;

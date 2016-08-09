@@ -18,27 +18,44 @@ var textScoreOrdi = document.getElementById('scoreOrdi');
 var textScoreUser = document.getElementById('scoreUser');
 var scoreUser = 0;
 var scoreOrdi = 0;
-
 // fonctions DOM
 
 textScoreUser.innerHTML = scoreUser;
 textScoreOrdi.innerHTML = scoreOrdi;
 
-function shake() {
+function shakeFist() {
     if (imagePierreOrdi.display === "none" && imagePierreUser.display === "none") {
         imagePierreOrdi.display = "block";
         imagePierreUser.display = "block";
-        imagePierreUser.className = "animated shake";
-        imagePierreOrdi.className = "animated shake";
+        imagePierreUser.classList.add("shake");
+        imagePierreOrdi.classList.add("shake");
+        setTimeout(function(){
+            clearClass(imagePierreOrdi);
+            clearClass(imagePierreUser);
+        }, 1000);
+
     } else {
-        imagePierreUser.className = "animated shake";
-        imagePierreOrdi.className = "animated shake";
+        imagePierreUser.classList.add("shake");
+        imagePierreOrdi.classList.add("shake");
+        setTimeout(function(){
+            clearClass(imagePierreOrdi);
+            clearClass(imagePierreUser);
+        }, 1000);
+
+    }
+
+}
+function clearClass(c) {
+    for (var i = 0; i < c.classList.length; i++) {
+        if (c.classList[i] == "shake") {
+            c.classList.remove("shake");
+        }
     }
 }
-
 // fonctions jeu
 
 function play() {
+    shakeFist();
     userChoice = parseInt(prompt("1) Pierre || 2) Feuille || 3) Ciseaux"));
     assigneChoix(userChoice);
     genereItemIA();

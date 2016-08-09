@@ -16,26 +16,35 @@
 
     <div id="sub_header">
         <div id="show_you" class="show">Vous</div>
-        <div id="score" class="show">
-            <p id="scoreUser"></p>
-            <p id="separation"> - </p>
-            <p id="scoreOrdi"></p>
-        </div>
         <div id="show_ordi" class="show">Ordinateur</div>
     </div>
     <div id="bandeau_affichage">
-        <div id="pixUser"></div>
-        <div id="cadre"></div>
-        <div id="pixOrdi"></div>
+        <div id="pixUser">
+            <img src="pix/rockUser.png" alt="rock" class="animated" onclick="shakeFist()"/>
+            <img src="pix/paperUser.png" alt="rock" class="animated"/>
+            <img src="pix/scissorUser.png" alt="rock" class="animated"/>
+        </div>
+        <div id="cadre">
+            <div id="score" class="show">
+                <p id="scoreUser"></p>
+                <p id="separation"> - </p>
+                <p id="scoreOrdi"></p>
+            </div>
+        </div>
+        <div id="pixOrdi">
+            <img src="pix/scissorOrdi.png" alt="rock" class="animated"/>
+            <img src="pix/paperOrdi.png" alt="rock" class="animated"/>
+            <img src="pix/rockOrdi.png" alt="rock" class="animated"/>
+        </div>
     </div>
     <footer>
         <div id="left">
-            <img src="pix/pierre_vous.png" alt="pierre utilisateur" id="rock_left"/>
+            <img src="pix/pierre_vous.png" alt="pierre utilisateur" class="animated" id="rock_left"/>
             <img src="pix/feuille_vous.png" alt="feuille utilisateur" id="paper_left" />
             <img src="pix/ciseaux_vous.png" alt="ciseaux utilisateur" id="scissor_left" />
         </div>
         <div id="right">
-            <img src="pix/pierre_ordi.png" alt="pierre ordinateur" id="rock_right"/>
+            <img src="pix/pierre_ordi.png" alt="pierre ordinateur" class="animated" id="rock_right"/>
             <img src="pix/feuille_ordi.png" alt="feuille ordinateur" id="paper_right" />
             <img src="pix/ciseaux_ordi.png" alt="ciseaux ordinateur" id="scissor_right" />
         </div>
