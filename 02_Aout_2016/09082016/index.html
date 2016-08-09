@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            // Un programme qui tire un pays au hasard et demande sa capitale au
+            // joueur ( vérification insensible à la casse ) - si : - le joueur répond
+            // correctement, le programme tire un autre pays au sort ( jamais 2 fois le même )
+            // jusqu’à avoir tiré les 4 - le joueur a trois essais par pays, après la troisième
+            // erreur : alert(‘Perdu’) - le joueur répond aux 4 : alert(‘Bravo’)
+
+            var pays = [
+                {pays: 'France', capitale: 'Paris'},
+                {pays: 'Espagne', capitale: 'Madrid'},
+                {pays: 'Italie', capitale: 'Rome'},
+                {pays: 'Belgique', capitale: 'Bruxelles'}
+                ];
+            var alreadyChoosen = [];
+            var nbWin = 0;
+            var nbEssais = 3;
+            var index;
+            var response;
+            var responseUser;
+            var question = "Quelle est la capitale du pays suivant : ";
+
+            function play() {
+                checkCountry();
+                response = pays[index].capitale;
+                alreadyChoosen.push(pays[index].pays);
+                responseUser = prompt(question + pays[index].pays);
+                nbEssais--;
+                if (response == responseUser && nbWin == 3) {
+                    alert("Bravo !");
+                    return;
+                } else if (response == responseUser) {
+                    nbWin++;
+                    nbEssais = 3;
+                    play();
+                } else if (response != responseUser && nbEssais == 0) {
+                    alert("Perdu !");
+                    return;
+                } else {
+                    playAgain();
+                }
+            }
+            function playAgain() {
+                nbEssais--;
+                responseUser = prompt(question + pays[index].pays);
+                if (response == responseUser && nbWin == 4) {
+                    alert("Bravo !");
+                    return;
+                } else if (response == responseUser) {
+                    nbWin++;
+                    nbEssais = 3;
+                    play();
+                } else if (response != responseUser && nbEssais == 0) {
+                    alert("Perdu !");
+                    return;
+                } else {
+                    playAgain();
+                }
+            }
+            function checkCountry() {
+                index = Math.floor(Math.random() * pays.length);
+                if (nbWin > 0) {
+                    for (var i = 0; i < alreadyChoosen.length; i++) {
+                        if (pays[index].pays == alreadyChoosen[i]) {
+                            checkCountry();
+                        }
+                    }
+                    return index;
+                }
+                return index;
+            }
+            play();
+
+        </script>
+    </body>
+</html>
