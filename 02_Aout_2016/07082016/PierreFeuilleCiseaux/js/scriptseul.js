@@ -1,4 +1,4 @@
-var itemsIA = ["pierre", "feuille", "ciseaux"];
+var itemsIA = ["pierre", "feuille", "ciseaux", "puits"];
 var userChoice;
 var computerChoice;
 var userWins = false;
@@ -7,13 +7,18 @@ var deuce = false;
 play();
 
 function play() {
-    userChoice = parseInt(prompt("1) Pierre || 2) Feuille || 3) Ciseaux"));
+    userChoice = parseInt(prompt("1) Pierre || 2) Feuille || 3) Ciseaux || 4) Puits"));
     assigneChoix(userChoice);
     genereItemIA();
     whoWin();
     playAgain();
 }
 
+function initWinner() {
+    userWins = false;
+    computerWins = false;
+    deuce = false;
+}
 function assigneChoix(n) {
     if (n === 1) {
         userChoice = "pierre";
@@ -21,6 +26,8 @@ function assigneChoix(n) {
         userChoice = "feuille";
     } else if (n === 3) {
         userChoice = "ciseaux";
+    } else if (n === 4) {
+        userChoice = "puits";
     } else {
         console.log("erreur");
         play();
@@ -44,6 +51,9 @@ function whoWin() {
         } else if (computerChoice === "feuille") {
             computerWins = true;
             annonce()
+        } else if (computerChoice === "puits") {
+            computerWins = true;
+            annonce()
         } else {
             deuce = true;
             annonce()
@@ -54,6 +64,9 @@ function whoWin() {
             annonce()
         } else if (computerChoice === "ciseaux") {
             computerWins = true;
+            annonce()
+        } else if (computerChoice === "puits") {
+            userWins = true;
             annonce()
         } else {
             deuce = true;
@@ -66,6 +79,23 @@ function whoWin() {
         } else if (computerChoice === "feuille") {
             userWins = true;
             annonce()
+        } else if (computerChoice === "puits") {
+            computerWins = true;
+            annonce()
+        } else {
+            deuce = true;
+            annonce()
+        }
+    } else if (userChoice === "puits") {
+        if (computerChoice === "pierre") {
+            userWins = true;
+            annonce()
+        } else if (computerChoice === "feuille") {
+            computerWins = true;
+            annonce()
+        } else if (computerChoice === "ciseaux") {
+            userWins = true;
+            annonce()
         } else {
             deuce = true;
             annonce()
@@ -76,14 +106,17 @@ function whoWin() {
 function annonce() {
     if (userWins === true) {
         console.log("Le gagnant est : Vous");
+        initWinner();
     } else if (computerWins === true) {
         console.log("Le gagnant est : Computer");
+        initWinner();
     } else {
         console.log("Egalité !");
+        initWinner();
     }
 }
 
 function playAgain() {
-    var choice = confirm('Vouslez-vous rejouer ?');
+    var choice = confirm('Voulez-vous rejouer ?');
     return choice ? play() : false;
 }

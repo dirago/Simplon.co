@@ -17,37 +17,34 @@
     <div id="sub_header">
         <div id="show_you" class="show">Vous</div>
         <div id="show_ordi" class="show">Ordinateur</div>
+        <img src="pix/makeachoice.png" alt="choisis ton personnage" id="makeachoice" />
     </div>
     <div id="bandeau_affichage">
-        <div id="pixUser">
-            <img src="pix/rockUser.png" alt="rock" class="animated" onclick="shakeFist()"/>
-            <img src="pix/paperUser.png" alt="rock" class="animated"/>
-            <img src="pix/scissorUser.png" alt="rock" class="animated"/>
+        <div id="pixUser" class="animated">
+            <img src="pix/rockUser.png" alt="rock" id="pierre" class="animated"/>
+            <img src="pix/paperUser.png" alt="paper" id="feuille" class="animated"/>
+            <img src="pix/scissorUser.png" alt="scissor" id="ciseaux" class="animated"/>
         </div>
         <div id="cadre">
             <div id="score" class="show">
-                <p id="scoreUser"></p>
+                <p id="scoreUser">0</p>
                 <p id="separation"> - </p>
-                <p id="scoreOrdi"></p>
+                <p id="scoreOrdi">0</p>
             </div>
         </div>
-        <div id="pixOrdi">
-            <img src="pix/scissorOrdi.png" alt="rock" class="animated"/>
-            <img src="pix/paperOrdi.png" alt="rock" class="animated"/>
-            <img src="pix/rockOrdi.png" alt="rock" class="animated"/>
+        <div id="pixOrdi" class="animated">
+            <img src="pix/scissorOrdi.png" alt="rock" id="miniature_ciseaux" class="animated"/>
+            <img src="pix/paperOrdi.png" alt="rock" id="miniature_feuille" class="animated"/>
+            <img src="pix/rockOrdi.png" alt="rock" id="miniature_pierre" class="animated"/>
         </div>
     </div>
     <footer>
-        <div id="left">
-            <img src="pix/pierre_vous.png" alt="pierre utilisateur" class="animated" id="rock_left"/>
-            <img src="pix/feuille_vous.png" alt="feuille utilisateur" id="paper_left" />
-            <img src="pix/ciseaux_vous.png" alt="ciseaux utilisateur" id="scissor_left" />
-        </div>
-        <div id="right">
-            <img src="pix/pierre_ordi.png" alt="pierre ordinateur" class="animated" id="rock_right"/>
-            <img src="pix/feuille_ordi.png" alt="feuille ordinateur" id="paper_right" />
-            <img src="pix/ciseaux_ordi.png" alt="ciseaux ordinateur" id="scissor_right" />
-        </div>
+        <img src="pix/rockUser.png" alt="rock" id="pierreUserActive" class="active_left animated"/>
+        <img src="pix/paperUser.png" alt="paper" id="feuilleUserActive" class="active_left animated"/>
+        <img src="pix/scissorUser.png" alt="scissor" id="ciseauxUserActive" class="active_left animated"/>
+        <img src="pix/rockOrdi.png" alt="rock" id="pierreOrdiActive" class="active_right animated"/>
+        <img src="pix/paperOrdi.png" alt="paper" id="feuilleOrdiActive" class="active_right animated"/>
+        <img src="pix/scissorOrdi.png" alt="scissor" id="ciseauxOrdiActive" class="active_right animated"/>
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
 </body>

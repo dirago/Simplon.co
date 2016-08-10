@@ -21,6 +21,7 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
+    margin-top: 60px;
 }
 #show_you {
     padding-left: 10%;
@@ -39,16 +40,36 @@ header {
     width: 150px;
     text-align: center;
     color: #e3cfae;
-    margin-top: 100px;
 }
 #bandeau_affichage {
     display: flex;
     flex-direction: row;
     width: 100%;
+    position: relative;
+}
+#makeachoice {
+    position: absolute;
+    left: 20%;
+    z-index: 1;
 }
 #pixUser {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 100px;
+    height: 400px;
+}
+.selected {
+    visibility: hidden;
+}
+.active_left {
+    position: absolute;
+    left: 35%;
+    bottom: 0px;
+}
+.active_right {
+    position: absolute;
+    right: 35%;
+    bottom: 0px;
 }
 #cadre {
     width: 600px;
@@ -68,37 +89,38 @@ header {
 }
 #pixOrdi {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 100px;
+    height: 400px;
 }
 footer {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     align-self: flex-end;
+    position: relative;
     width: 100%;
     height: auto;
 }
-footer #left img {
-    width: 300px;
-    height: auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+footer img {
+    width: auto;
+    height: 240px;
 }
-footer #right img {
-    width: 300px;
-    height: auto;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-#paper_left {
+#pierreUserActive {
     display: none;
 }
-#scissor_left {
+#feuilleUserActive {
     display: none;
 }
-#paper_right {
+#ciseauxUserActive {
     display: none;
 }
-#scissor_right {
+#pierreOrdiActive {
+    display: none;
+}
+#feuilleOrdiActive {
+    display: none;
+}
+#ciseauxOrdiActive {
     display: none;
 }
