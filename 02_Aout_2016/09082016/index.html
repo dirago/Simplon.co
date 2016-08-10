@@ -21,7 +21,7 @@
                 ];
             var alreadyChoosen = [];
             var nbWin = 0;
-            var nbEssais = 3;
+            var nbTry = 3;
             var index;
             var response;
             var responseUser;
@@ -32,15 +32,15 @@
                 response = pays[index].capitale;
                 alreadyChoosen.push(pays[index].pays);
                 responseUser = prompt(question + pays[index].pays);
-                nbEssais--;
+                nbTry--;
                 if (response == responseUser && nbWin == 3) {
                     alert("Bravo !");
                     return;
                 } else if (response == responseUser) {
                     nbWin++;
-                    nbEssais = 3;
+                    nbTry = 3;
                     play();
-                } else if (response != responseUser && nbEssais == 0) {
+                } else if (response != responseUser && nbTry == 0) {
                     alert("Perdu !");
                     return;
                 } else {
@@ -48,16 +48,16 @@
                 }
             }
             function playAgain() {
-                nbEssais--;
+                nbTry--;
                 responseUser = prompt(question + pays[index].pays);
-                if (response == responseUser && nbWin == 4) {
+                if (response == responseUser && nbWin == 3) {
                     alert("Bravo !");
                     return;
                 } else if (response == responseUser) {
                     nbWin++;
-                    nbEssais = 3;
+                    nbTry = 3;
                     play();
-                } else if (response != responseUser && nbEssais == 0) {
+                } else if (response != responseUser && nbTry == 0) {
                     alert("Perdu !");
                     return;
                 } else {
