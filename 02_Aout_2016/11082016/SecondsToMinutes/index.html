@@ -5,6 +5,24 @@
         <title>Seconds To Minutes</title>
     </head>
     <body>
-
+        <script type="text/javascript">
+            function secondesEnMinutes(n) {
+                if (n > 60) {
+                    if (n > 3600) {
+                        var h = Math.round(n / 3600);
+                        var m = Math.round((n / 60) % 60);
+                        var s = n % 60;
+                        console.log(h + "h " + m + "m " + s + "s");
+                    } else {
+                        var m = Math.round(n / 60);
+                        var s = n % 60;
+                        console.log(m + "m " + s + "s");
+                    }
+                } else {
+                    s = n
+                    console.log(s + "s");
+                }
+            }
+        </script>
     </body>
 </html>
