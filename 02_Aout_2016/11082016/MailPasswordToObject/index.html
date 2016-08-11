@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Mail/Mot de passe vers Object</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var Personne = function(mail, password) {
+                this.mail = mail;
+                this.password = password;
+            }
+            function createUser() {
+                var mail = prompt("Veuillez entrer votre mail");
+                var password = prompt("Veuillez entrer votre mot de passe");
+                var newUser = new Personne(mail, password);
+                console.log(newUser);
+            }
+            createUser();
+        </script>
+    </body>
+</html>
