@@ -9,12 +9,12 @@
             function secondesEnMinutes(n) {
                 if (n > 60) {
                     if (n > 3600) {
-                        var h = Math.round(n / 3600);
-                        var m = Math.round((n / 60) % 60);
+                        var h = Math.floor(n / 3600);
+                        var m = Math.floor((n / 60) % 60);
                         var s = n % 60;
                         console.log(h + "h " + m + "m " + s + "s");
                     } else {
-                        var m = Math.round(n / 60);
+                        var m = Math.floor(n / 60);
                         var s = n % 60;
                         console.log(m + "m " + s + "s");
                     }
