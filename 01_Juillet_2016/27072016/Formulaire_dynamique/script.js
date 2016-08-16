@@ -21,7 +21,7 @@ var utilisateurs = {
     "id": ["joe@gmail.com", "diragor@gmail.com", "nsarkozy@gmail.com"],
     "nom": ["Joe", "Raphaël", "Nicolas"],
     "pw": ["12345", "azerty", "82742"]
-}
+};
 
 // Lancement de l'identification
 function logIn() {
@@ -35,42 +35,42 @@ function logIn() {
 
 function verif(login, password) {
     // On vérifie que tous les champs soient remplis
-    if (login == "" || login == null || login == undefined) {
+    if (login === "" || login === null || login === undefined) {
         erreur.style.visibility = 'visible';
         erreur.innerHTML = "<p>Les deux champs doivent être remplis !</p>";
         return;
-    } else if (password == "" || password == null || password == undefined)
+    } else if (password === "" || password === null || password === undefined) {
         erreur.style.visibility = 'visible';
-    erreur.innerHTML = "<p>Les deux champs doivent être remplis !</p>";
-    return;
-}
-// On vérifie que l'id saisi par l'utilisateur contient plus de 4 caractères
-if (login.length < 5) {
-    erreur.style.visibility = 'visible';
-    erreur.innerHTML = "<p>Votre e-mail contient moins de 5 caractères</p>";
-    return;
-}
-// On vérifie que la saisie de l'utilisateur contient bien une @
-if (regex.test(login) == false) {
-    erreur.style.visibility = 'visible';
-    erreur.innerHTML = "<p>Votre e-mail n'est pas valide</p>";
-    return;
-}
-// Vérification de l'id saisi en rapport avec notre "BDD"
-var tailleUtilisateurs = utilisateurs.id.length;
-var dernierElement = tailleUtilisateurs - 1;
-for (var i = 0; i < tailleUtilisateurs; i++) {
-    if (utilisateurs.id[i] == login) {
-        var index = i;
-        checkPassword(index);
+        erreur.innerHTML = "<p>Les deux champs doivent être remplis !</p>";
         return;
     }
-}
-if (utilisateurs.id[dernierElement] != login) {
-    erreur.style.visibility = 'visible';
-    erreur.innerHTML = "<p>Vous n'avez pas encore de compte chez DRg !</p>";
-    return;
-}
+    // On vérifie que l'id saisi par l'utilisateur contient plus de 4 caractères
+    if (login.length < 5) {
+        erreur.style.visibility = 'visible';
+        erreur.innerHTML = "<p>Votre e-mail contient moins de 5 caractères</p>";
+        return;
+    }
+    // On vérifie que la saisie de l'utilisateur contient bien une @
+    if (regex.test(login) === false) {
+        erreur.style.visibility = 'visible';
+        erreur.innerHTML = "<p>Votre e-mail n'est pas valide</p>";
+        return;
+    }
+    // Vérification de l'id saisi en rapport avec notre "BDD"
+    var tailleUtilisateurs = utilisateurs.id.length;
+    var dernierElement = tailleUtilisateurs - 1;
+    for (var i = 0; i < tailleUtilisateurs; i++) {
+        if (utilisateurs.id[i] == login) {
+            var index = i;
+            checkPassword(index);
+            return;
+        }
+    }
+    if (utilisateurs.id[dernierElement] != login) {
+        erreur.style.visibility = 'visible';
+        erreur.innerHTML = "<p>Vous n'avez pas encore de compte chez DRg !</p>";
+        return;
+    }
 }
 // Vérification du couple id/mdp
 function checkPassword(index) {
