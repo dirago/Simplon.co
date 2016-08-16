@@ -2,13 +2,7 @@ var voyelles = "aeiouy";
 
 // la fonction reçoit un caractère en paramètre et doit renvoyer true si le texte contient une voyelle, false sinon
 function estUneVoyelle( lettre ){
-    for (var i = 0; i < voyelles.length; i++) {
-        if (lettre === undefined) {
-            return false;
-        } else {
-            return lettre.includes(voyelles[i]);
-        }
-    }
+    return voyelles.indexOf(lettre) > -1;
 }
 
 console.log("estUneVoyelle('f') :", estUneVoyelle('f') ); // false
