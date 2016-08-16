@@ -36,7 +36,7 @@ console.log('premierMotEnMajuscule', premierMot.toUpperCase() ); // UN
  * fonctions utiles : parseInt , parseFloat, isNaN
  */
 
-var valeur1 = '15';
+var valeur1 = 15;
 var somme = valeur1 + 3;
 console.log('somme == 18', somme == 18 ); // true
 
@@ -52,17 +52,18 @@ var mails = ["Joe@gmAil.com", "LEA@test.com", "Bob@gmAil.com"];
 var nombreDeMails = mails.length;
 console.log('nombreDeMails', nombreDeMails );
 
-var dernierMail = mails[2];
+var dernierMail = mails[mails.length - 1];
 console.log('dernierMail', dernierMail );
 
 // est ce que tout les mails sont gmail
 var test;
+var suffixe = "gmail.com";
 for( var i = 0 ; i < mails.length ; i++ ){
-    if (!mails[i].includes("gmAil")) {
+    test = true;
+    var mailEnMinuscule = mails[i].toLowerCase();
+    if (mails[i].indexOf(suffixe) == -1) {
         test = false;
         break;
-    } else {
-        test = true;
     }
 }
 
@@ -79,7 +80,7 @@ console.log('mails en minuscules', mailsMinuscule.toString() );
 // TODO : remplacez les @ par des _
 var mailsUnderscore = [];
 for (var i = 0; i < mails.length; i++) {
-    mailsUnderscore.push(mails[i].replace(/@/i, "_"));
+    mailsUnderscore.push(mails[i].replace("@", "_"));
 }
 console.log('mails remplacés par underscore', mailsUnderscore.toString() );
 // TODO : supprimez les .com
