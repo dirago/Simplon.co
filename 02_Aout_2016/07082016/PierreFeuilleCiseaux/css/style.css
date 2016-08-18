@@ -124,3 +124,6 @@ footer img {
 #ciseauxOrdiActive {
     display: none;
 }
+.unclickable {
+    pointer-events: none;
+}

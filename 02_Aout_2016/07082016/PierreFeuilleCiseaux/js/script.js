@@ -32,6 +32,8 @@ var scoreUser = 0;
 var scoreOrdi = 0;
 
 document.getElementById('pierre').onclick = function() {
+    document.getElementById('ciseaux').classList.toggle("unclickable");
+    document.getElementById('feuille').classList.toggle("unclickable");
     genereItemIA();
     userChoice = this.id;
     elmt = this;
@@ -41,13 +43,19 @@ document.getElementById('pierre').onclick = function() {
     setTimeout(function() {activeUserRock.style.display = "block";},1500);
     setTimeout(function() {showActive(computerChoice);},1500);
     play();
-    setTimeout(function() {clearClass(activeUserRock);}, 5000);
-    setTimeout(function() {hideActive(computerChoice);}, 5000);
-    setTimeout(function() {clearClass(elmt);}, 5000);
-    setTimeout(function() {showIAMiniature(computerChoice);}, 5000);
+    setTimeout(function() {clearClass(activeUserRock);}, 4000);
+    setTimeout(function() {hideActive(computerChoice);}, 4000);
+    setTimeout(function() {clearClass(elmt);}, 4000);
+    setTimeout(function() {
+        showIAMiniature(computerChoice);
+        document.getElementById('ciseaux').classList.toggle("unclickable");
+        document.getElementById('feuille').classList.toggle("unclickable");
+    }, 4000);
 };
 
 document.getElementById('feuille').onclick = function() {
+    document.getElementById('ciseaux').classList.toggle("unclickable");
+    document.getElementById('pierre').classList.toggle("unclickable");
     genereItemIA();
     userChoice = this.id;
     elmt = this;
@@ -60,10 +68,17 @@ document.getElementById('feuille').onclick = function() {
     setTimeout(function() {clearClass(activeUserPaper);}, 4000);
     setTimeout(function() {hideActive(computerChoice);}, 4000);
     setTimeout(function() {clearClass(elmt);}, 4000);
-    setTimeout(function() {showIAMiniature(computerChoice);}, 4000);
+    setTimeout(function() {
+        showIAMiniature(computerChoice);
+        document.getElementById('ciseaux').classList.toggle("unclickable");
+        document.getElementById('pierre').classList.toggle("unclickable");
+    }, 4000);
+
 };
 
 document.getElementById('ciseaux').onclick = function() {
+    document.getElementById('feuille').classList.toggle("unclickable");
+    document.getElementById('pierre').classList.toggle("unclickable");
     genereItemIA();
     userChoice = this.id;
     elmt = this;
@@ -73,10 +88,14 @@ document.getElementById('ciseaux').onclick = function() {
     setTimeout(function() {activeUserScissor.style.display = "block";},1500);
     setTimeout(function() {showActive(computerChoice);},1500);
     play();
-    setTimeout(function() {clearClass(activeUserScissor);}, 5000);
-    setTimeout(function() {hideActive(computerChoice);}, 5000);
-    setTimeout(function() {clearClass(elmt);}, 5000);
-    setTimeout(function() {showIAMiniature(computerChoice);}, 5000);
+    setTimeout(function() {clearClass(activeUserScissor);}, 4000);
+    setTimeout(function() {hideActive(computerChoice);}, 4000);
+    setTimeout(function() {clearClass(elmt);}, 4000);
+    setTimeout(function() {
+        showIAMiniature(computerChoice);
+        document.getElementById('feuille').classList.toggle("unclickable");
+        document.getElementById('pierre').classList.toggle("unclickable");
+    }, 4000);
 };
 // fonctions DOM
 function showActive(c) {
@@ -143,7 +162,6 @@ function genereItemIA() {
     for (var i = 0; i < itemsIA.length; i++) {
         computerChoice = itemsIA[number];
     }
-    console.log("L'ordinateur a choisi : ", computerChoice);
 }
 
 function whoWin() {
@@ -186,24 +204,24 @@ function isSomebodyWins(){
     if (scoreUser == 3) {
         setTimeout(function(){
             textScoreUser.style.color = "green";
-            score.insertAdjacentHTML('afterend', '<div id ="fin" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:20px;">Vous avez gagné en 3 manches !</div>');
+            score.insertAdjacentHTML('afterend', '<div id ="fin" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:70px;">Vous avez gagné en 3 manches !</div>');
             allPixUser.style.display = "none";
             allPixOrdi.style.display = "none";
             makeachoice.style.display = "none";
         }, 5000);
         setTimeout(function(){
-            score.insertAdjacentHTML('afterend', '<div id="rejouer" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:100px;color:#944949;cursor:crosshair;" onClick="window.location.reload()" class="animated tada">Rejouer ?</div>');
+            score.insertAdjacentHTML('afterend', '<div id="rejouer" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:145px;color:#944949;cursor:crosshair;" onClick="window.location.reload()" class="animated tada">Rejouer ?</div>');
         }, 6000);
     } else if (scoreOrdi == 3) {
         setTimeout(function(){
             textScoreOrdi.style.color = "green";
-            score.insertAdjacentHTML('afterend', '<div id="fin" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:20px;">L\'ordinateur a gagné en 3 manches !</div>');
+            score.insertAdjacentHTML('afterend', '<div id="fin" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:70px;">L\'ordinateur a gagné en 3 manches !</div>');
             allPixUser.style.display = "none";
             allPixOrdi.style.display = "none";
             makeachoice.style.display = "none";
         }, 5000);
         setTimeout(function(){
-            score.insertAdjacentHTML('afterend', '<div id="rejouer" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:100px;color:#944949;cursor:crosshair;" onClick="window.location.reload()" class="animated tada">Rejouer ?</div>');
+            score.insertAdjacentHTML('afterend', '<div id="rejouer" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:145px;color:#944949;cursor:crosshair;" onClick="window.location.reload()" class="animated tada">Rejouer ?</div>');
         }, 6000);
     } else {
         return;
