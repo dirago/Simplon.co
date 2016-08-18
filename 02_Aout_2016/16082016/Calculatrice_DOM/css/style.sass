@@ -1,0 +1,84 @@
+// imports
+@import 'animate.css'
+@import 'https://fonts.googleapis.com/css?family=Montserrat'
+// variables
+$height: 700px
+$width: 400px
+$color-right: #f98c11
+$color-middle: #c5c5c5
+$color-down: #d6d7d9
+
+*
+    margin: 0 auto
+    font-family: 'Myriad Pro', sans-serif
+    font-size: 1.2em
+body
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+
+section
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: $width
+    background-color: #000
+    color: white
+    box-sizing: border-box
+    border-top: 1px solid black
+    border-right: 1px solid black
+
+    article
+        display: flex
+        flex-direction: column
+
+    article#up
+        height: ($height / 3.5)
+        width: $width
+
+        #result
+            justify-content: flex-end
+            align-items: flex-end
+            padding-right: 20px
+            font-size: 2.5em
+            cursor: none
+
+    article.row
+        display: flex
+        flex-direction: row
+        width: 100%
+        height: ($height / 7)
+
+        .selected-op
+            border: 2px solid #000
+
+        .item
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-grow: 1
+            cursor: pointer
+            border-bottom: 1px solid black
+            border-left: 1px solid black
+            box-sizing: border-box
+            width: ($width / 4)
+
+        .right
+            background-color: $color-right
+
+        .right:focus
+            outline: 0
+
+        .down
+            background-color: $color-down
+            color: black
+
+        .middle
+            background-color: $color-middle
+            color: black
+
+        #zero
+            // flex-grow: 2
+            width: ($width / 2)
