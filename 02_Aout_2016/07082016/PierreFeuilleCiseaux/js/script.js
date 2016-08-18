@@ -243,7 +243,7 @@ function print() {
         setTimeout(function(){textScoreOrdi.innerHTML = "<p class='animated flash'>" + scoreOrdi + "</p>";}, 3000);
     } else {
         initWinner();
-        setTimeout(function(){score.insertAdjacentHTML('afterend', '<div id="temp" class="animated flash" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:20px;color:#6c6c6c;">Egalité</div>');}, 3000);
+        setTimeout(function(){score.insertAdjacentHTML('afterend', '<div id="temp" class="animated flash" style="position:absolute;left:50%;width:100px;margin-left:-50px;text-align:center;margin-top:70px;color:#6c6c6c;">Egalité</div>');}, 3000);
         setTimeout(function(){document.getElementById('temp').style.display = "none";}, 5000);
     }
 }
