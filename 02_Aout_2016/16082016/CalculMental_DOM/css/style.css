@@ -1,0 +1,102 @@
+@import url(animate.css);
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin: auto;
+}
+
+body h1#entete {
+	margin: 100px 0 100px 0;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	box-sizing: border-box;
+	background-color: grey;
+	color: white;
+	width: 100%;
+	height: 400px;
+	padding: 30px;
+	border-top: 3px solid #000;
+	border-bottom: 3px solid #000;
+}
+
+section div#btn_play {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 160px;
+	height: 45px;
+}
+
+section .btn {
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 45px;
+	margin: 0 auto 2em;
+	max-width: 160px;
+	position: relative;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+section .btn-5 {
+	border: 0 solid;
+	box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+	outline: 1px solid;
+	outline-color: rgba(255, 255, 255, 0.5);
+	outline-offset: 0px;
+	text-shadow: none;
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+section .btn-5:hover {
+	border: 1px solid;
+	outline-color: rgba(255, 255, 255, 0);
+	outline-offset: 13px;
+	background-color: #FFF;
+	color: #000;
+}
+
+section h1#level {
+	display: none;
+	font-size: 15em;
+	margin: auto;
+}
+
+section h2#question {
+	display: none;
+	margin: auto;
+	margin-bottom: 0;
+}
+
+section input {
+	margin: auto;
+	display: none;
+	height: 70px;
+	width: 90px;
+	text-align: center;
+	font-size: 2em;
+	border: 1px solid black;
+}
+
+section div#gameover {
+	display: none;
+	margin: auto;
+	font-size: 2em;
+}
