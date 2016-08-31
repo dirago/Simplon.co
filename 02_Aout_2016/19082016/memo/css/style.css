@@ -7,9 +7,17 @@
 body {
 	font-family: 'Montserrat', sans-serif;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
+}
+
+span#time {
+	width: 760px;
+	height: auto;
+	display: flex;
+	justify-content: center;
 }
 
 article {
@@ -28,4 +36,8 @@ article section .card {
 	background-color: #cccccc;
 	margin: 20px;
 	border-radius: 10px;
+}
+
+article section .red {
+	background-color: red;
 }
