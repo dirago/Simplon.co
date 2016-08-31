@@ -69,7 +69,7 @@ function stopChrono(s) {
 }
 
 $(function(){
-    $(document).one("click", function() {launchChrono(20)});
+    $('article').one("click", function() {launchChrono(20)});
     // when the document is loaded, we assign colors for each card
     assign(cards);
     // first use of jQuery, just for velocityJS
