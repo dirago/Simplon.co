@@ -1,2 +1,151 @@
 @import 'animate.css'
 @import 'font-awesome-4.6.3/css/font-awesome.min.css'
+@import 'https://fonts.googleapis.com/css?family=Baloo+Tamma|Roboto'
+
+$link-color: #ec4343
+$bg-body: rgba(255, 249, 233, 1)
+$fa: 'FontAwesome'
+
+body
+    margin: 0
+    background-color: $bg-body
+    height: 100vh
+    width: 100vw
+    font-family: 'Roboto', cursive
+    color: white
+
+h1, h2
+    font-family: 'Baloo Tamma', cursive
+
+h2
+    font-size: 1.5em
+
+p
+    font-family: 'Roboto', sans-serif
+
+a
+    color: $link-color
+    text-decoration: none
+    border-bottom: 1px solid $link-color
+    cursor: help
+
+ul, li
+    list-style-type: none
+
+li
+    margin: 10px
+
+li::before
+    content: '\f046'
+    font-family: $fa
+    font-size: 1em
+    margin-right: 10px
+
+img
+    position: absolute
+    top: 20px
+    right: 14px
+    height: 140px
+    width: auto
+    transform: rotate(-20deg)
+
+main
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    margin: auto
+    padding: 50px
+    width: 800px
+    background-color: orange
+    box-shadow: 0 0 30px orange
+    border-right: 1px solid #FF9900
+    border-left: 1px solid #FF9900
+    text-align: justify
+    box-sizing: border-box
+
+    .fa-sun-o
+        position: absolute
+        top: 45px
+        left: 55px
+        font-size: 4em
+        color: #fed849
+
+    .niveaux::before
+        content: '\f071'
+        font-family: $fa
+        font-size: 1em
+        margin-right: 10px
+
+    .left
+        align-self: flex-start
+
+    .left-link2
+        margin-left: 80px
+
+    .left-link3
+        margin-left: 160px
+
+    .left-link4
+        margin-left: 240px
+
+    a.left::before
+        content: '\f067'
+        font-family: $fa
+        font-size: 1em
+        margin-right: 10px
+
+    .important
+        color: $link-color
+        font-weight: bold
+
+footer
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    margin: auto
+    width: 800px
+    height: 200px
+    background-color: $link-color
+    box-shadow: 0 0 30px $link-color
+    border-right: 1px solid #e80f0f
+    border-left: 1px solid #e80f0f
+    border-top: 1px solid #e80f0f
+    text-align: justify
+    box-sizing: border-box
+
+    .footer-bottom
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+        .footer-block
+            width: 400px
+            height: 113px
+
+        .left-block
+            border-right: 1px solid #fff
+            text-align: center
+
+            .important
+                font-weight: bold
+                font-size: 4em
+                font-family: 'Baloo Tamma', cursive
+                margin: 0 auto
+
+            .important::before
+                content: '\f10b'
+                font-family: 'FontAwesome'
+                margin-right: 5px
+
+        .right-block
+
+            .right-text
+                text-align: center
+                font-size: 1.5em
+                font-family: 'Baloo Tamma', cursive
+                margin: 0 auto
