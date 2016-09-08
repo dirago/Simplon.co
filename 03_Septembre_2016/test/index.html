@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="chpPrenom">Prenom</label>
+            <input id="chpPrenom" type="text">
+        </div>
+        <div>
+            <label for="chpNom">Nom</label>
+            <input id=chpNom type="text">
+        </div>
+        <div>
+            <label for="chpMail">Mail</label>
+            <input id=chpMail type="text">
+        </div>
+        <button type="button" onclick="gestionnaireContact.ajouteContact(document.getElementById('chpNom').value, document.getElementById('chpPrenom').value, document.getElementById('chpMail').value), gestionnaireContact.showContacts()">
+            Ajouter</button>
+    </form>
+    <script type="text/javascript">
+        var gestionnaireContact = {
+            contacts: [],
+            ajouteContact: function(nom, prenom, mail) {
+                console.log('ajoute');
+                //  créer un objet nouveauContact avec les valeurs transmises
+                var nouveauContact = {
+                    mail: mail,
+                    nom: nom,
+                    prenom: prenom
+                };
+                //  ajoute nouveauContact à contacts
+                this.contacts.push(nouveauContact);
+                console.log(this.contacts);
+            },
+            showContacts: function(  ) {
+                var div = document.createElement("div");
+                for (var i = 0; i < this.contacts.length; i++) {
+                    div.innerHTML = "<br>Nom : " + this.contacts[i].nom + "<br>" + "Prénom : " + this.contacts[i].prenom + "<br>" + "Mail : " + this.contacts[i].mail;
+                }
+                document.body.appendChild(div);
+            }
+        }
+    </script>
+</body>
+
+</html>
