@@ -136,6 +136,7 @@ footer .footer-bottom {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 38px;
 }
 
 footer .footer-bottom .footer-block {
@@ -159,6 +160,10 @@ footer .footer-bottom .left-block .important::before {
 	content: '\f10b';
 	font-family: 'FontAwesome';
 	margin-right: 5px;
+}
+
+footer .footer-bottom .right-block {
+	text-align: center;
 }
 
 footer .footer-bottom .right-block .right-text {

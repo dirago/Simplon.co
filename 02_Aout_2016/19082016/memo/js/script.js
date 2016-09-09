@@ -92,8 +92,9 @@ $(function(){
                 $(clickedCards[0].id).velocity({rotateY:"0deg", backgroundColor: clickedCards[0].defaultColor},{delay: 1000})
                 clickedCards.splice(1,1);
             } else if (clickedCards[0].color !== clickedCards[1].color) {
-                $(clickedCards[0].elmt).velocity({rotateY:"0deg",backgroundColor: clickedCards[0].defaultColor},{delay: 1000})
-                clickedCards.splice(0,1);
+                $(clickedCards[0].elmt).velocity({rotateY:"0deg",backgroundColor: clickedCards[0].defaultColor},{delay: 700})
+                $(clickedCards[1].elmt).velocity({rotateY:"0deg",backgroundColor: clickedCards[0].defaultColor},{delay: 300})
+                clickedCards.splice(0,2);
             } else {
                 stopChrono(4)
                 clickedCards[0].found = true;
