@@ -1,0 +1,24 @@
+{
+  "colors":[
+    {
+      "name":"rouge",
+      "value":"#f00"
+    },
+    {
+      "name":"bleu",
+      "value":"#00f"
+    },
+    {
+      "name":"vert",
+      "value":"#0f0"
+    },
+    {
+      "name":"",
+      "value":"#f0f"
+    },
+    {
+      "name":"jaune",
+      "value":"#ff0"
+    }
+  ]
+}

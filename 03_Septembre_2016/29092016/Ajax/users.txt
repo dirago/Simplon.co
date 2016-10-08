@@ -1,0 +1,19 @@
+{
+	"participants":[
+		{
+			"id":1,
+			"nom":"Durant",
+			"prenom":"Lea"
+		},
+		{
+			"id":2,
+			"nom":"Dupond",
+			"prenom":"Joe"
+		},
+		{
+			"id":3,
+			"nom":"Martin",
+			"prenom":"Jean"
+		}
+	]
+}
