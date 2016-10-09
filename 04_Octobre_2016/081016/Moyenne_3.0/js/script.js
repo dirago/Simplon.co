@@ -1,6 +1,6 @@
 'use strict'
 
-// Constants assignations
+// Assignments of constants
 const
     messageContainer = document.getElementsByClassName('moyenne-message')[0],
     averageContainer = document.getElementsByClassName('moyenne-note')[0],
