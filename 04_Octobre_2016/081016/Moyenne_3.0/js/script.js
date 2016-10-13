@@ -22,8 +22,8 @@ function averageCalc() {
         let moyenne = totalNotes / arr.length;
         showAverage(moyenne);
         arr.forEach(function(i){i.value = ""});
-    };
-};
+    }
+}
 
 // Function for hide/show contents when error happened
 function showError(msg){
@@ -31,7 +31,7 @@ function showError(msg){
     averageContainer.style.display = "none";
     errorContainer.style.display = "flex";
     errorContainer.innerHTML = msg;
-};
+}
 
 // Function for hide/show contents when average is defined
 function showAverage(avg){
@@ -39,4 +39,6 @@ function showAverage(avg){
     averageContainer.style.display = "flex";
     errorContainer.style.display = "none";
     averageContainer.innerHTML = avg + "/20";
-};
+}
+
+
