@@ -11,9 +11,11 @@ define('USER_NAME', 'Raphaël');
     <meta charset="utf-8">
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body>
+    <?php include 'header.php'; ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
@@ -25,7 +27,8 @@ define('USER_NAME', 'Raphaël');
                     if ($_POST['login'] == USER_LOGIN){
                         if ($_POST['password'] == USER_PW) { ?>
                         <div class="panel-body">
-                            <span><mark>Bienvenue <?php echo USER_NAME ?></mark></span>
+                            <span><mark>Bienvenue <?php echo USER_NAME ?></mark></span><br><br>
+                            <a href="<?php $_SERVER['PHP_SELF'] ?>">Déconnexion</a>
                         </div>
                         <?php } else { ?>
                         <div class="panel-body">
