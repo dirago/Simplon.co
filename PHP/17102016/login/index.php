@@ -1,7 +1,7 @@
 <?php
-$loginDb = "diragor";
-$pwDb = "test";
-$name = "Raphaël"
+define('USER_LOGIN', 'diragor');
+define('USER_PW', 'test');
+define('USER_NAME', 'Raphaël');
  ?>
 
 <!DOCTYPE html>
@@ -20,35 +20,34 @@ $name = "Raphaël"
                             <h1 class="panel-title">Login</h1>
                         </div>
                         <?php
-                        if ($_POST['login'] == $loginDb){
-                            if ($_POST['password'] == $pwDb) {
-                                echo "<div class=\"panel-body\">
-                                <span><mark>Bienvenue {$name}</mark></span>
-                                </div>";
-                            } else {
-                                echo "<div class=\"panel-body\">
-                                    <span>Mauvais mot de passe</span>
-                                    <form class=\"\" action=\"".$_SERVER['PHP_SELF']."\" method=\"post\">
-                                        Login
-                                        <input type=\"text\" name=\"login\"><br>
-                                        Password
-                                        <input type=\"password\" name=\"password\"><br>
-                                        <button class=\"btn\" type=\"submit\">Valider</button>
-                                    </form>
-                                </div>";
-                            }
-                        } else {
-                        echo "
-                        <div class=\"panel-body\">
-                            <form class=\"\" action=\"".$_SERVER['PHP_SELF']."\" method=\"post\">
+                        if ($_POST['login'] == USER_LOGIN){
+                            if ($_POST['password'] == USER_PW) { ?>
+                            <div class="panel-body">
+                                <span><mark>Bienvenue <?php echo USER_NAME ?></mark></span>
+                            </div>
+                            <?php } else { ?>
+                            <div class="panel-body">
+                                <span>Mauvais mot de passe</span>
+                                <form class="" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+                                    Login
+                                    <input type="text" name="login"><br>
+                                    Password
+                                    <input type="password" name="password"><br>
+                                        <button class="btn" type="submit">Valider</button>
+                                </form>
+                            </div>
+                            <?php }
+                        } else { ?>
+                            <div class="panel-body">
+                                <form class="" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
                                 Login
-                                <input type=\"text\" name=\"login\"><br>
+                                <input type="text" name="login"><br>
                                 Password
-                                <input type=\"password\" name=\"password\"><br>
-                                <button class=\"btn\" type=\"submit\">Valider</button>
+                                <input type="password" name="password"><br>
+                                <button class="btn" type="submit">Valider</button>
                             </form>
-                        </div>";
-                        } ?>
+                        </div>
+                        <?php } ?>
 
                     </div>
                 </div>
