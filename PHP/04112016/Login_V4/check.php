@@ -18,16 +18,12 @@ if ($_POST['login'] !== "" && $_POST['password'] !== "") {
         $_SESSION['login'] = $login;
         $result = [
             "response" => "OK",
-            "login" => $login,
-            "pw" => $pw,
-            "session" => $_SESSION
+            "login" => $login
             ];
     } else {
         session_destroy();
         $result = [
-            "response" => "PAS OK",
-            "login" => $_POST['login'],
-            "pw" => $pw
+            "response" => "PAS OK"
             ];
     }
     $results->closeCursor();
