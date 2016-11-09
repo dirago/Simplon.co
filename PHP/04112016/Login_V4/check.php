@@ -3,7 +3,7 @@ session_start();
 include_once 'db.php';
 
 if ($_POST['login'] !== "" && $_POST['password'] !== "") {
-    $login = mysql_real_escape_string($_POST['login']);
+    $login = $_POST['login'];
     $pw = sha1($_POST['password']);
 
     $sql = "SELECT * FROM users WHERE username=:usn AND password=:pw";
@@ -21,7 +21,6 @@ if ($_POST['login'] !== "" && $_POST['password'] !== "") {
             "login" => $login
             ];
     } else {
-        session_destroy();
         $result = [
             "response" => "PAS OK"
             ];

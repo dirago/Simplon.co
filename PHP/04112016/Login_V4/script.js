@@ -25,9 +25,7 @@ btn.addEventListener('click', function(e){
         req.onload = loadResult;
         req.open("POST", "check.php", true);
         // je crée le formdata pour poster les infos vers le php
-        var formData = new FormData();
-        formData.append('login', loginInput.value);
-        formData.append('password', pwInput.value);
+        var formData = new FormData(form);
         req.send(formData);
     }
 });
