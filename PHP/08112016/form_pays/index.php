@@ -8,17 +8,16 @@
     <body>
 
         <form class="" method="post">
-            <label for="pays">Pays</label>
-            <input id="pays" type="text" name="pays" value="">
-            <label for="capitale">Capitale</label>
-            <input id="capitale" type="text" name="capitale" value="">
-            <label for="drapeau">Drapeau</label>
-            <input id="drapeau" type="text" name="drapeau" value="">
+            <input id="pays" type="text" name="pays" placeholder="Pays">
+            <input id="capitale" type="text" name="capitale" placeholder="Capitale">
+            <input id="drapeau" type="text" name="drapeau" placeholder="Drapeau (url)">
             <button type="submit" name="button">Envoyer</button>
         </form>
 
         <div id="error"></div>
-        <div id="result"></div>
+        <div id="result">
+
+        </div>
 
         <script type="text/javascript" src="js/script.js"></script>
 

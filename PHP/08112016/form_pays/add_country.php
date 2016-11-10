@@ -14,16 +14,21 @@ if (isset($_POST['pays']) && isset($_POST['capitale']) && isset($_POST['drapeau'
     $stmt->bindParam(':name', $pays, PDO::PARAM_STR);
     $stmt->bindParam(':flag', $drapeau, PDO::PARAM_STR);
     $stmt->bindParam(':capital', $capitale, PDO::PARAM_STR);
-    $stmt->execute();
+    $success = $stmt->execute();
+    if ($success){
+        $result = [
+            "pays" => $pays,
+            "capitale" => $capitale,
+            "urlDrapeau" => $drapeau,
+            "success" => $success
+        ];
+    } else {
+        $result = [
+            "success" => $success
+        ];
+    }
     $stmt->closeCursor();
-    $result = [
-        "pays" => $pays,
-        "capitale" => $capitale,
-        "drapeau" => $drapeau
-    ];
-
-    echo json_encode(array('result' => $result));
 }
 
-
+echo json_encode(array('result' => $result));
  ?>

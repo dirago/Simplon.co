@@ -5,6 +5,36 @@ var form = document.querySelector('form'),
     resultDiv = document.querySelector('#result'),
     errorMessage = document.querySelector('#error');
 
+window.onload = function(){
+    countryInput.focus()
+    var ajax = new XMLHttpRequest;
+    ajax.onload = showCountry;
+    ajax.open('GET', '../show_country.php', true);
+    ajax.send();
+}
+
+function showCountry(){
+    var json = JSON.parse(this.responseText);
+    var table = document.createElement('table');
+    table.id = "table";
+    table.width = "700";
+    table.cellSpacing = "20";
+    table.className = "animated fadeIn"
+    table.innerHTML = "<th width=\"100\">Pays</th><th width=\"100\">Capitale</th><th width=\"100\">Drapeau</th>"
+    document.body.appendChild(table);
+    json.map(function(elt){
+        var entry = document.createElement('tr');
+        entry.className = "animated fadeIn";
+        entry.innerHTML = '<td>'+cap(elt.pays)+'</td><td>'+cap(elt.capitale)+'</td><td><img src="'+cap(elt.drapeau)+'" width="100"/></td>';
+        table.appendChild(entry);
+        console.log(elt);
+    });
+}
+
+function cap(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 form.addEventListener('submit', function(e){
     e.preventDefault();
     if (errorMessage.hasChildNodes()){errorMessage.removeChild(errorMessage.childNodes[0])};
@@ -13,29 +43,54 @@ form.addEventListener('submit', function(e){
         message.innerText = "Erreur";
         errorMessage.appendChild(message);
     } else {
-        var ajax = new XMLHttpRequest();
-        ajax.onload = loadResult();
-        ajax.open('post', 'add_country.php', true);
+        var rq = new XMLHttpRequest();
+        rq.onload = loadResult;
+        rq.open('POST', '../add_country.php', true);
         var formData = new FormData(form);
-        ajax.send(formData);
+        rq.send(formData);
     }
+    countryInput.value = ""
+    capitalInput.value = ""
+    flagInput.value = ""
+    countryInput.focus()
 });
 
 function loadResult(){
-    var json = JSON.parse(this.responseText);
-    var res = json.result.response;
-    var login = json.result.login;
-    if (res === "OK") {
-        error = document.createElement('div');
-        error.innerHTML = "<div class='alert alert-success' role='alert'>Bienvenue cher " + login + "</div>"
-        formContainer.insertBefore(error, form);
-        deco = document.createElement('a');
-        deco.innerHTML = '<a href="logout.php">Déconnexion</a>';
-        header.appendChild(deco);
-        console.log(json.result);
-    } else {
-        error = document.createElement('div');
-        error.innerHTML = "<div class='alert alert-danger' role='alert'>Mauvaise combinaison login/mot de passe</div>"
-        formContainer.insertBefore(error, form);
-    }
+    var json = JSON.parse(this.responseText),
+        pays = json.result.pays,
+        capitale = json.result.capitale,
+        url = json.result.urlDrapeau,
+        success = json.result.success;
+        if (success) {
+            if (errorMessage.hasChildNodes()){
+                this.map(function(el){
+                    this.removeChild(el);
+                });
+            }
+            var newEntry = document.createElement('tr');
+            newEntry.className = "animated fadeIn";
+            newEntry.innerHTML = '<td>'+pays+'</td><td>'+capitale+'</td><td><img src="'+url+'" width="100"/></td>';
+            if (document.querySelector('#table')){
+                document.querySelector('#table').appendChild(newEntry);
+            } else {
+                var table = document.createElement('table');
+                table.id = "table";
+                table.width = "700";
+                table.cellSpacing = "20";
+                table.className = "animated fadeIn"
+                table.innerHTML = "<th width=\"100\">Pays</th><th width=\"100\">Capitale</th><th width=\"100\">Drapeau</th>"
+                document.body.appendChild(table);
+                table.appendChild(newEntry)
+            }
+        } else {
+            if (errorMessage.hasChildNodes()){
+                this.map(function(el){
+                    this.removeChild(el);
+                });
+            }
+            var error = document.createElement('p');
+            error.innerText = "Votre entrée existe déjà";
+            error.className = "animated fadeIn"
+            errorMessage.appendChild(error);
+        }
 };
