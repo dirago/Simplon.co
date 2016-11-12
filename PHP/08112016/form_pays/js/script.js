@@ -32,7 +32,7 @@ function showCountry(){
 }
 
 function cap(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
 form.addEventListener('submit', function(e){
@@ -40,7 +40,7 @@ form.addEventListener('submit', function(e){
     if (errorMessage.hasChildNodes()){errorMessage.removeChild(errorMessage.childNodes[0])};
     if (countryInput.value.trim().length < 1 || capitalInput.value.trim().length < 1 || flagInput.value.trim().length < 1) {
         var message = document.createElement('p');
-        message.innerText = "Erreur";
+        message.innerText = "Erreur de saisie... Veuillez recommencer";
         errorMessage.appendChild(message);
     } else {
         var rq = new XMLHttpRequest();
@@ -69,7 +69,7 @@ function loadResult(){
             }
             var newEntry = document.createElement('tr');
             newEntry.className = "animated fadeIn";
-            newEntry.innerHTML = '<td>'+pays+'</td><td>'+capitale+'</td><td><img src="'+url+'" width="100"/></td>';
+            newEntry.innerHTML = '<td>'+cap(pays)+'</td><td>'+cap(capitale)+'</td><td><img src="'+url+'" width="100"/></td>';
             if (document.querySelector('#table')){
                 document.querySelector('#table').appendChild(newEntry);
             } else {
