@@ -1,19 +1,30 @@
 //
 @import 'animate'
+@import 'reset'
 body
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: space-around
+    width: 100vw
+    font-family: Helvetica, sans-serif
+
+.add-country
     display: flex
     flex-direction: column
     align-items: center
-    width: 100vw
-    font-family: Helvetica, sans-serif
+.add-lang
+    display: flex
+    flex-direction: column
+    align-items: center
 
 form
     display: flex
     flex-direction: column
-    align-items: center
+    align-items: flex-start
     justify-content: space-around
     margin-top: 20px
-    input
+    input, select
         padding: 10px
         width: 400px
         margin: 10px 0
@@ -27,6 +38,16 @@ form
         font-size: 1em
         &:focus
             box-shadow: 0 6px 11px -10px black
+    select
+        background-color: white
+        border-radius: 0px
+        color: #A9A9A9
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        width: 200px
+        .selected
+            color: #A9A9A9
     button
         padding: 10px
         background-color: white
@@ -36,6 +57,7 @@ form
         box-sizing: border-box
         transition: all .5s ease
         outline: none
+        align-self: center
         &:hover, &:focus
             box-shadow: 0 6px 11px -10px black
 

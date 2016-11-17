@@ -21,7 +21,7 @@ function showCountry(){
     table.cellSpacing = "20";
     table.className = "animated fadeIn"
     table.innerHTML = "<th width=\"100\">Pays</th><th width=\"100\">Capitale</th><th width=\"100\">Drapeau</th>"
-    document.body.appendChild(table);
+    document.querySelector('.add-country').appendChild(table);
     json.map(function(elt){
         var entry = document.createElement('tr');
         entry.className = "animated fadeIn";
