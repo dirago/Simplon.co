@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "POP! Vinyl: Arrow: The Arrow",
+      "exclTAX": "11.50",
+      "currency": "€",
+      "color": "green",
+      "pix": "//cdn.shopify.com/s/files/1/1076/5736/products/8ea598aceab637f48414b54b930858e2_large.jpeg?v=1453809349"
+    },
+    {
+      "id": 2,
+      "name": "POP! Vinyl: Orange is the New Black: Suzanne 'Crazy Eyes' Warren",
+      "exclTAX": "11.50",
+      "currency": "€",
+      "color": "beige",
+      "pix": "//cdn.shopify.com/s/files/1/1076/5736/products/125302dec2a969747a92389ffb80613c_large.jpeg?v=1453809215"
+    },
+    {
+      "id": 3,
+      "name": "POP! Vinyl: The Flash: The Flash",
+      "exclTAX": "11.75",
+      "currency": "€",
+      "color": "brown",
+      "pix": "//cdn.shopify.com/s/files/1/1076/5736/products/aea7fab0e859fb6e35e6bc9a6fb46d82_large.jpeg?v=1453809278"
+    },
+    {
+      "id": 4,
+      "name": "POP! Vinyl: Game of Thrones: Daenerys Targaryen",
+      "exclTAX": "11.50",
+      "currency": "€",
+      "color": "white",
+      "pix": ""
+    },
+    {
+      "id": 5,
+      "name": "POP! Vinyl: Orange is the New Black: Suzanne 'Crazy Eyes' Warren",
+      "exclTAX": "11.50",
+      "currency": "€",
+      "color": "beige",
+      "pix": "//cdn.shopify.com/s/files/1/1076/5736/products/125302dec2a969747a92389ffb80613c_large.jpeg?v=1453809215"
+    },
+    {
+      "id": 6,
+      "name": "POP! Vinyl: Breaking Bad: Walter White",
+      "exclTAX": "11.50",
+      "currency": "€",
+      "color": "green",
+      "pix": "//cdn.shopify.com/s/files/1/1076/5736/products/bec79c632fd16b04069b7ad17e16319e_large.jpeg?v=1456848048"
+    },
+    {
+      "id": 7,
+      "name": "POP! Vinyl: The Walking Dead: Daryl",
+      "exclTAX": "11.50",
+      "currency": "€",
+      "color": "beige",
+      "pix": "//cdn.shopify.com/s/files/1/1076/5736/products/566e23fd9898069ddc43cee1fd2927ac_large.jpeg?v=1453810303"
+    },
+    {
+      "id": 8,
+      "name": "POP! Vinyl: Game of Thrones: Jon Snow Castle Black",
+      "exclTAX": "11.75",
+      "currency": "€",
+      "color": "grey",
+      "pix": "//cdn.shopify.com/s/files/1/1076/5736/products/6395b94896dd5a5d9307690538732a2c_large.jpeg?v=1456848062"
+    }
+  ]
+}

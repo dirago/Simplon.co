@@ -1,0 +1,20 @@
+{
+  "name": "POO_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./ES6 -w --out-dir ./public/js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-cli": "^6.18.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.18.0"
+  }
+}
